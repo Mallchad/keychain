@@ -1,0 +1,6 @@
+[submodule "cemacs"]
+	path = cemacs
+	url = https://github.com/mallchad/cemacs/
+[submodule "sweet_home/.config/awesome"]
+	path = sweet_home/.config/awesome
+	url = https://github.com/mallchad/sweet_home/
