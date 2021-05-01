@@ -1,0 +1,14 @@
+OptionChain=OPT,11:
+ActivityMonitor=STK,3:OPT,6:
+OrderEntry=STK,111:OPT,19:CASH,170:
+MainWin=STK,6:CASH,4:
+BookTraderSingleClick=CASH,1:
+OptionExercise=OPT,12:
+Close=STK,17:OPT,1:CASH,1:
+ChartTraderSingleClick=STK,1:
+OptTrader=OPT,1:
+Watchlist=STK,4:CASH,2:
+new.user.sequence=PredefinedWatchlist,2:PBI,2:MobileSharedWatchList,2:FYI,2:Benchmarker,2:Research,2:
+bond.scan.queried=false
+futures.limit.achieved=false
+ibis.images=

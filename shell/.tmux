@@ -1,0 +1,1 @@
+source-file "./.local/share/tmux-themepack/powerline/default/cyan.tmuxtheme"

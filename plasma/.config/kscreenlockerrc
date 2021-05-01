@@ -1,0 +1,11 @@
+[$Version]
+update_info=kscreenlocker.upd:0.1-autolock
+
+[Daemon]
+LockGrace=0
+
+[Greeter]
+Theme=Aritim-Dark
+
+[Greeter][Wallpaper][org.kde.image][General]
+Image=file:///home/mallchad/.local/share/wallpapers/Plasma_K012_2K.png

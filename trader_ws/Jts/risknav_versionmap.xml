@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>IB Risk Navigator (SM) - Version Mapping</comment>
+<entry key="9999,983,984">
+risknav.version=5.9.4
+pivot.version=3.4.3
+riskNavOther.version=4.0
+</entry>
+<entry key="982">
+risknav.version=5.9.3
+pivot.version=3.4.3
+riskNavOther.version=4.0
+</entry>
+<entry key="981">
+risknav.version=5.8.5
+pivot.version=3.4.2
+riskNavOther.version=4.0
+</entry>
+<entry key="979,980">
+risknav.version=5.7.21
+pivot.version=3.3.7
+riskNavOther.version=4.0
+</entry>
+<entry key="978">
+risknav.version=5.6.6
+pivot.version=3.2.1
+riskNavOther.version=4.0
+</entry>
+<entry key="977">
+risknav.version=5.5.9
+pivot.version=3.2.1
+riskNavOther.version=4.0
+</entry>
+<entry key="976">
+risknav.version=5.4.17
+pivot.version=3.1.0
+riskNavOther.version=4.0
+</entry>
+<entry key="975">
+risknav.version=5.3.8
+pivot.version=3.1.0
+riskNavOther.version=4.0
+</entry>
+<entry key="974">
+risknav.version=5.3.8
+pivot.version=3.1.0
+riskNavOther.version=4.0
+</entry>
+<entry key="973">
+risknav.version=5.2.9
+pivot.version=3.0.2
+riskNavOther.version=4.0
+</entry>
+<entry key="972">
+risknav.version=5.2.9
+pivot.version=3.0.2
+riskNavOther.version=4.0
+</entry>
+<entry key="971">
+risknav.version=5.1.1
+pivot.version=3.0.0
+riskNavOther.version=4.0
+</entry>
+<entry key="970">
+risknav.version=5.0.4
+pivot.version=3.0.0
+riskNavOther.version=4.0
+</entry>
+<entry key="969">
+risknav.version=4.12.7
+pivot.version=2.6.1
+riskNavOther.version=3.0
+</entry>
+<entry key="968">
+risknav.version=4.11.10
+pivot.version=2.5.4
+riskNavOther.version=3.0
+</entry>
+<entry key="967">
+risknav.version=4.10.4
+pivot.version=2.5.1
+riskNavOther.version=3.0
+</entry>
+<entry key="965,966">
+risknav.version=4.9.6
+pivot.version=2.4.6
+riskNavOther.version=3.0
+</entry>
+<entry key="964">
+risknav.version=4.9.6
+pivot.version=2.4.6
+riskNavOther.version=2.1
+</entry>
+<entry key="961,962,963">
+risknav.version=4.7.1
+pivot.version=2.3.1
+riskNavOther.version=2.1
+</entry>
+<entry key="960">
+risknav.version=4.6.4
+pivot.version=2.3.1
+riskNavOther.version=2.1
+</entry>
+<entry key="959">
+risknav.version=4.6.4
+pivot.version=2.3.1
+riskNavOther.version=2.1
+</entry>
+<entry key="958">
+risknav.version=4.5.4
+pivot.version=2.3.1
+riskNavOther.version=2.1
+</entry>
+<entry key="957">
+risknav.version=4.5.4
+pivot.version=2.3.1
+riskNavOther.version=2.1
+</entry>
+<entry key="956">
+risknav.version=4.5.0
+pivot.version=2.3.0
+riskNavOther.version=2.1
+</entry>
+<entry key="955">
+risknav.version=4.2.6
+pivot.version=2.1.1
+riskNavOther.version=2.0
+</entry>
+<entry key="954">
+risknav.version=4.1.10
+pivot.version=2.0.1
+riskNavOther.version=2.0
+</entry>
+<entry key="953">
+risknav.version=4.0.10
+pivot.version=2.0.1
+riskNavOther.version=2.0
+</entry>
+<entry key="952">
+risknav.version=4.0.3
+pivot.version=2.0.0
+riskNavOther.version=2.0
+</entry>
+<entry key="951">
+risknav.version=3.6.6
+pivot.version=1.11.1
+riskNavOther.version=1.4
+</entry>
+<entry key="950">
+risknav.version=3.5.4
+pivot.version=1.11.1
+riskNavOther.version=1.4
+</entry>
+<entry key="949">
+risknav.version=3.4.11
+pivot.version=1.10.20
+riskNavOther.version=1.4
+</entry>
+<!-- older versions are not supported any more -->
+</properties>
+
+
+

@@ -1,0 +1,91 @@
+[$Version]
+update_info=kwinrules.upd:replace-placement-string-to-enum
+
+[1]
+Description=Winetricks
+above=true
+aboverule=3
+clientmachine=localhost
+clientmachinematch=0
+desktop=1
+desktoprule=3
+title=Winetricks
+titlematch=0
+wmclass=zenity
+wmclasscomplete=false
+wmclassmatch=1
+
+[2]
+Description=Settings for steam
+clientmachine=localhost
+clientmachinematch=0
+desktop=1
+desktoprule=3
+title=Steam
+titlematch=0
+wmclass=steam
+wmclasscomplete=false
+wmclassmatch=1
+
+[3]
+Description=Terraria
+clientmachine=localhost
+clientmachinematch=0
+fullscreen=true
+fullscreenrule=2
+title=Terraria: A Bunnies Tale
+titlematch=0
+wmclass=terraria.bin.x86
+wmclasscomplete=false
+wmclassmatch=1
+
+[4]
+Description=All Windows
+noborder=true
+noborderrule=2
+wmclass=
+wmclasscomplete=false
+wmclassmatch=0
+
+[5]
+Description=Settings for discord
+clientmachine=localhost
+clientmachinematch=0
+desktop=3
+desktoprule=3
+title=Discord Updater
+titlematch=0
+wmclass=discord
+wmclasscomplete=false
+wmclassmatch=1
+
+[6]
+Description=Settings for unity
+clientmachine=localhost
+clientmachinematch=0
+desktop=1
+desktoprule=3
+title=Unity - arca_prototype - Untitled - PC, Mac & Linux Standalone - Unity 2019.3.6f1 <OpenGL 4.5>
+titlematch=0
+wmclass=unity
+wmclasscomplete=false
+wmclassmatch=1
+
+[7]
+Description=Settings for google-chrome
+clientmachine=localhost
+clientmachinematch=0
+desktop=2
+desktoprule=3
+opacityactive=0
+opacityactiverule=1
+opacityinactive=100
+opacityinactiverule=2
+title=Download Ubuntu Desktop | Download | Ubuntu - Google Chrome
+titlematch=0
+wmclass=google-chrome
+wmclasscomplete=false
+wmclassmatch=1
+
+[General]
+count=7

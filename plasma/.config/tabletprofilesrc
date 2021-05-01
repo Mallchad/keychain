@@ -1,0 +1,138 @@
+[056A:0357]
+CurrentProfileEntry=-1
+ProfileRotationList=
+
+[056A:0357][Default][eraser]
+Area=0 0 0 0
+Button1=1
+Button2=2
+Button3=3
+Mode=absolute
+PressureCurve=0 0 100 100
+RawSample=4
+Rotate=auto
+ScreenSpace=desktop
+Suppress=2
+TabletPcButton=off
+Threshold=27
+
+[056A:0357][Default][pad]
+AbsWheel2Down=5
+AbsWheel2Up=4
+AbsWheelDown=5
+AbsWheelUp=4
+Button1=0
+Button2=0
+Button3=0
+Button4=0
+Button5=0
+Button6=0
+Button7=0
+Button8=0
+Button9=0
+
+[056A:0357][Default][stylus]
+Area=0 0 0 0
+Button1=1
+Button2=2
+Button3=3
+Mode=absolute
+PressureCurve=0 0 100 100
+RawSample=4
+Rotate=auto
+ScreenSpace=desktop
+Suppress=2
+TabletPcButton=off
+Threshold=27
+
+[056A:0357][Default][touch]
+Area=0 0 0 0
+Gesture=on
+InvertScroll=off
+Mode=absolute
+Rotate=auto
+ScreenSpace=desktop
+ScrollDistance=20
+TapTime=250
+Touch=on
+ZoomDistance=50
+
+[056A:0357][osu][eraser]
+Area=15784 6387 40458 22690
+Button1=0
+Button2=1
+Button3=3
+Mode=absolute
+PressureCurve=0 0 100 100
+RawSample=4
+Rotate=cw
+ScreenMap=desktop:15784 6387 40458 22690
+ScreenSpace=desktop
+Suppress=2
+TabletPcButton=off
+Threshold=27
+
+[056A:0357][osu][pad]
+AbsWheel2Down=5
+AbsWheel2Up=4
+AbsWheelDown=5
+AbsWheelUp=4
+Button1=0
+Button2=0
+Button3=0
+Button4=0
+Button5=0
+Button6=0
+Button7=0
+Button8=0
+Button9=0
+
+[056A:0357][osu][stylus]
+Area=15784 6387 40458 22690
+Button1=0
+Button2=1
+Button3=3
+Mode=absolute
+PressureCurve=0 0 100 100
+RawSample=4
+Rotate=cw
+ScreenMap=desktop:15784 6387 40458 22690
+ScreenSpace=desktop
+Suppress=2
+TabletPcButton=off
+Threshold=27
+
+[056A:0360]
+CurrentProfileEntry=-1
+
+[056A:0360][Default][eraser]
+Area=0 0 0 0
+Button1=1
+Button2=2
+Button3=3
+Mode=absolute
+PressureCurve=0 0 100 100
+RawSample=4
+Rotate=auto
+ScreenSpace=desktop
+Suppress=2
+TabletPcButton=off
+Threshold=27
+
+[056A:0360][Default][pad]
+AbsWheelDown=5
+AbsWheelUp=4
+
+[056A:0360][Default][stylus]
+Area=0 0 0 0
+Button1=1
+Button2=2
+Button3=3
+Mode=absolute
+PressureCurve=0 0 100 100
+RawSample=4
+Rotate=auto
+ScreenSpace=desktop
+Suppress=2
+TabletPcButton=off
+Threshold=27

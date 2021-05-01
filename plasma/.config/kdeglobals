@@ -1,0 +1,266 @@
+[$Version]
+update_info=filepicker.upd:filepicker-remove-old-previews-entry,fonts_global.upd:Fonts_Global,fonts_global_toolbar.upd:Fonts_Global_Toolbar,icons_remove_effects.upd:IconsRemoveEffects,kwin.upd:animation-speed,style_widgetstyle_default_breeze.upd:StyleWidgetStyleDefaultBreeze
+
+[ColorEffects:Disabled]
+Color=56,56,56
+ColorAmount=0.1
+ColorEffect=1
+ContrastAmount=0.6000000000000001
+ContrastEffect=1
+IntensityAmount=0.1
+IntensityEffect=2
+
+[ColorEffects:Inactive]
+ChangeSelectionColor=true
+Color=112,111,110
+ColorAmount=0.025000000000000001
+ColorEffect=2
+ContrastAmount=0.10000000000000001
+ContrastEffect=2
+Enable=false
+IntensityAmount=0
+IntensityEffect=0
+
+[Colors:Button]
+BackgroundAlternate=43,57,72
+BackgroundNormal=43,57,72
+DecorationFocus=43,82,120
+DecorationHover=70,103,153
+ForegroundActive=211,218,227
+ForegroundInactive=146,152,165
+ForegroundLink=93,136,202
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=211,218,227
+ForegroundPositive=39,174,96
+ForegroundVisited=62,91,135
+
+[Colors:Complementary]
+BackgroundAlternate=30,87,116
+BackgroundNormal=42,46,50
+DecorationFocus=76,99,125
+DecorationHover=76,99,125
+ForegroundActive=61,174,233
+ForegroundInactive=161,169,177
+ForegroundLink=29,153,243
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=252,252,252
+ForegroundPositive=39,174,96
+ForegroundVisited=155,89,182
+
+[Colors:Header]
+BackgroundAlternate=42,46,50
+BackgroundNormal=49,54,59
+DecorationFocus=61,174,233
+DecorationHover=61,174,233
+ForegroundActive=61,174,233
+ForegroundInactive=161,169,177
+ForegroundLink=29,153,243
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=252,252,252
+ForegroundPositive=39,174,96
+ForegroundVisited=155,89,182
+
+[Colors:Header][Inactive]
+BackgroundAlternate=49,54,59
+BackgroundNormal=42,46,50
+DecorationFocus=61,174,233
+DecorationHover=61,174,233
+ForegroundActive=61,174,233
+ForegroundInactive=161,169,177
+ForegroundLink=29,153,243
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=252,252,252
+ForegroundPositive=39,174,96
+ForegroundVisited=155,89,182
+
+[Colors:Selection]
+BackgroundAlternate=76,99,125
+BackgroundNormal=43,82,120
+DecorationFocus=43,82,120
+DecorationHover=70,103,153
+ForegroundActive=211,218,227
+ForegroundInactive=211,218,227
+ForegroundLink=93,136,202
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=211,218,227
+ForegroundPositive=39,174,96
+ForegroundVisited=62,91,135
+
+[Colors:Tooltip]
+BackgroundAlternate=47,52,63
+BackgroundNormal=53,57,69
+DecorationFocus=43,82,120
+DecorationHover=70,103,153
+ForegroundActive=211,218,227
+ForegroundInactive=146,152,165
+ForegroundLink=93,136,202
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=211,218,227
+ForegroundPositive=39,174,96
+ForegroundVisited=62,91,135
+
+[Colors:View]
+BackgroundAlternate=33,43,54
+BackgroundNormal=16,21,26
+DecorationFocus=43,82,120
+DecorationHover=70,103,153
+ForegroundActive=211,218,227
+ForegroundInactive=146,152,165
+ForegroundLink=93,136,202
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=211,218,227
+ForegroundPositive=39,174,96
+ForegroundVisited=62,91,135
+
+[Colors:Window]
+BackgroundAlternate=47,52,63
+BackgroundNormal=20,26,33
+DecorationFocus=43,82,120
+DecorationHover=70,103,153
+ForegroundActive=211,218,227
+ForegroundInactive=146,152,165
+ForegroundLink=93,136,202
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=211,218,227
+ForegroundPositive=39,174,96
+ForegroundVisited=62,91,135
+
+[DirSelect Dialog]
+DirSelectDialog Size=846,586
+History Items[$e]=file:$HOME/pictures/elite_dangerous/v_photography,file:$HOME/pictures/elite_dangerous/v_photography,file:///,file:///data/backup,file:///data/repos/arca_prototype/arca_elementum/build,file:///data/repos/arca_prototype/arca_elementum/arca_elementum,file:$HOME/ps_vita/packages,file:$HOME/ps_vita/content,file:$HOME/ps_vita/updates,file:$HOME/ps_vita,file:$HOME
+
+[General]
+BrowserApplication=org.qutebrowser.qutebrowser.desktop
+ColorScheme=AritimDark
+Name=Aritim-Dark_DEV
+TerminalApplication=alacritty
+TerminalService=Alacritty.desktop
+XftAntialias=true
+XftHintStyle=hintslight
+XftSubPixel=rgb
+fixed=Hack,12,-1,5,50,0,0,0,0,0
+shadeSortColumn=true
+smallestReadableFont=Noto Sans,9,-1,5,50,0,0,0,0,0
+widgetStyle=Breeze
+
+[Icons]
+Theme=breeze-dark
+
+[KDE]
+AnimationDurationFactor=0
+ColorScheme=Breeze
+LookAndFeelPackage=Aritim-Dark
+ShowDeleteCommand=true
+SingleClick=false
+contrast=4
+widgetStyle=Fusion
+
+[KFileDialog Settings]
+Allow Expansion=false
+Automatically select filename extension=true
+Breadcrumb Navigation=false
+Decoration position=2
+LocationCombo Completionmode=5
+PathCombo Completionmode=5
+Show Bookmarks=false
+Show Full Path=false
+Show Inline Previews=true
+Show Preview=false
+Show Speedbar=true
+Show hidden files=true
+Sort by=Date
+Sort directories first=true
+Sort reversed=false
+Speedbar Width=138
+View Style=Simple
+
+[KScreen]
+ScaleFactor=1
+ScreenScaleFactors=DP-0=1;DP-1=1;HDMI-0=1;DP-2=1;DP-3=1;eDP-1-1=1;
+
+[KShortcutsDialog Settings]
+Dialog Size=600,480
+
+[Paths]
+Autostart[$e]=/dev/null
+
+[PreviewSettings]
+MaximumRemoteSize=0
+
+[QtQuickRendererSettings]
+ForceGlCoreProfile=true
+RenderLoop=threaded
+SceneGraphBackend=opengl
+
+[Shortcuts]
+Activate Next Tab=
+Activate Previous Tab=
+ActualSize=
+AddBookmark=
+Back=Alt+Left
+BackwardWord=Ctrl+Left; Alt+B
+Begin=
+BeginningOfLine=Ctrl+A
+Close=
+Copy=Alt+W
+Cut=Ctrl+X
+DeleteFile=Ctrl+Shift+D
+DeleteWordForward=Alt+D; Ctrl+Del
+Deselect=
+DocumentBack=
+DocumentForward=
+End=
+EndOfLine=
+FindNext=
+FindPrev=Ctrl+R
+Forward=
+ForwardWord=Ctrl+Right; Alt+F
+FullScreen=F11
+GotoLine=Alt+G, G
+Help=
+Home=
+MoveToTrash=
+New=Ctrl+N;\s
+Next=
+NextCompletion=
+Paste=Ctrl+Y; Ctrl+V
+Paste Selection=
+Preferences=
+PrevCompletion=
+Print=
+Prior=
+Quit=
+Reload=F5
+Replace=; Ctrl+Shift+F
+RotateDown=
+RotateUp=
+Save=Ctrl+S;\s
+SaveAs=Ctrl+Shift+S; Ctrl+X, Ctrl+S
+SelectAll=Ctrl+X, H; Ctrl+H
+ShowHideHiddenFiles=
+ShowMenubar=
+Spelling=Ctrl+Alt+I
+SubstringCompletion=
+TextCompletion=
+Up=
+WhatsThis=
+ZoomIn=
+ZoomOut=
+
+[WM]
+activeBackground=20,26,33,216
+activeBlend=252,252,252
+activeForeground=211,218,227
+frame=0,0,0
+inactiveBackground=47,52,63
+inactiveBlend=47,52,63
+inactiveForeground=102,106,115,216
+inactiveFrame=0,0,0
