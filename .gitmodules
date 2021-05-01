@@ -1,7 +1,7 @@
-[submodule "cemacs"]
+[submodule "emacs"]
 	url = https://github.com/mallchad/cemacs
 [submodule "sweet_home"]
 	url = github.com/mallchad/sweet_home
-[submodule "emacs"]
-	path = emacs
-	url = ./emacs
+[submodule "cemacs"]
+	path = cemacs
+	url = https://github.com/mallchad/cemacs/
