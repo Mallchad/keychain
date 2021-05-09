@@ -154,7 +154,14 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 ## Completion and Correction
 # source <(cod init $$ zsh)
 # setopt correct_all
-source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
+aur_zsh_autocomplete_dir=/usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+if [[ -e $aur_zsh_autocomplete_dir ]]
+then
+    source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+else
+    source ${HOME}/.local/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+fi
 # The code below sets all of `zsh-autocomplete`'s settings to their default values.
 zstyle ':autocomplete:*' default-context ''
 # '': Start each new command line with normal autocompletion.
