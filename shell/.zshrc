@@ -33,6 +33,7 @@ bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/mallchad/.zshrc'
+# Sanity Functions
 function DEBUG()
 {
     if [[ $DEBUG ]]
@@ -122,6 +123,7 @@ zlooking-glass-client()
         $@
 }
 alias -g znull="> /dev/null 2> /dev/null"
+alias -g ZNULL="> /dev/null 2> /dev/null"
 zzstd()
 {
     target=$1
@@ -219,7 +221,7 @@ bindkey $key[Down]  down-line-or-select
 bindkey $key[Control-Space] list-expand
 # list-expand:      Reveal hidden completions.
 # set-mark-command: Activate text selection.
-bindkey -M menuselect $key[Return] .accept-line
+# bindkey -M menuselect $key[Return] .accept-line
 # .accept-line: Accept command line.
 # accept-line:  Accept selection and exit menu.
 # Uncomment the following lines to disable live history search:
