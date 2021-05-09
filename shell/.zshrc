@@ -224,7 +224,11 @@ zle -A {.,}history-incremental-search-backward
 # source /data/repos/zsh_autosuggestions/zsh-autosuggestions.zsh
 # ZSH_AUTOSUGGEST_USE_ASYNC=1
 
+# z.lua faster directory navigation
 source $HOME/.local/share/z.lua/z.lua.plugin.zsh
+zl_data_dir=${XDG_DATA_HOME}/zlua
+_ZL_DATA=${zl_data_dir}/database
+mkdir -p ${zl_data_dir}
 
 ## Visuals
 # Syntax Highlighting
