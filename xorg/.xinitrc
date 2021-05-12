@@ -1,3 +1,6 @@
 #!/bin/bash
-export KDEWM=awesome
+if [[ $KDEWM != "kwin" ]]
+then
+	export KDEWM=awesome
+fi
 exec startplasma-x11
