@@ -235,10 +235,13 @@ zle -A {.,}history-incremental-search-backward
 
 # z.lua faster directory navigation
 source $HOME/.local/share/z.lua/z.lua.plugin.zsh
-zl_data_dir=${XDG_DATA_HOME}/zlua
-_ZL_DATA=${zl_data_dir}/database
+zl_data_dir="$HOME/.local/share/zlua/"
+if [[ -n ${XDG_DATA_HOME} ]]
+then
+    zl_data_dir=${XDG_DATA_HOME}/zlua
+fi
+export _ZL_DATA=${zl_data_dir}/database
 mkdir -p ${zl_data_dir}
-
 ## Visuals
 # Syntax Highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
