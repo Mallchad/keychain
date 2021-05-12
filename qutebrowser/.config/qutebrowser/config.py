@@ -1,6 +1,7 @@
 config.load_autoconfig()
 config.set("colors.webpage.darkmode.enabled", True)
 config.bind(",darkmode", "config-cycle colors.webpage.darkmode.enabled")
+config.bind("b", "set-cmd-text --space :tab-select  ", mode="normal")
 config.set("colors.webpage.darkmode.enabled", True)
 config.set("colors.webpage.darkmode.threshold.background", 155)
 config.set("colors.webpage.darkmode.threshold.text", 155)
