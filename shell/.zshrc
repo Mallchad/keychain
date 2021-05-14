@@ -41,12 +41,18 @@ function DEBUG()
         $@
     fi
 }
+# Only for non-systemd systems, could be updated for Windows maybe?
 # Alias and Command Behaviour Modifacation
 # alias poweroff="loginctl poweroff"
 # alias reboot="loginctl reboot"
 # alias halt="loginctl halt"
 # alias suspend="loginctl suspend"
 alias merge="diff --line-format %L"
+alias -g znull="> /dev/null 2> /dev/null"
+alias -g ZNULL="> /dev/null 2> /dev/null"
+# Because apps like to litter your *real* "home"
+export zsh_data_home=${HOME}/userdata
+alias -g zhome=$zsh_data_home
 sudo()
 {
     arguments=()
@@ -122,8 +128,6 @@ zlooking-glass-client()
         win:quickSplash=yes \
         $@
 }
-alias -g znull="> /dev/null 2> /dev/null"
-alias -g ZNULL="> /dev/null 2> /dev/null"
 zzstd()
 {
     target=$1
@@ -187,9 +191,9 @@ zstyle ':autocomplete:*' list-lines 16  # (integer)
 
 # If any of the following are shown at the same time, list them in the order given:
 zstyle ':completion:*:' group-order \
-  expansions history-words options \
-  aliases functions builtins reserved-words \
-  executables local-directories directories suffix-aliases
+       expansions history-words options \
+       aliases functions builtins reserved-words \
+       executables local-directories directories suffix-aliases
 # NOTE: This is NOT the order in which they are generated.
 
 zstyle ':autocomplete:tab:*' insert-unambiguous no
@@ -203,53 +207,53 @@ zstyle ':autocomplete:tab:*' widget-style complete-word
 # NOTE: Can NOT be changed at runtime.
 
 zstyle ':autocomplete:tab:*' fzf-completion no
-# no:  Tab uses Zsh's completion system only.
-# yes: Tab first tries Fzf's completion, then falls back to Zsh's.
-# NOTE 1: Can NOT be changed at runtime.
-# NOTE 2: Requires that you have installed Fzf's shell extensions.
+    # no:  Tab uses Zsh's completion system only.
+    # yes: Tab first tries Fzf's completion, then falls back to Zsh's.
+    # NOTE 1: Can NOT be changed at runtime.
+    # NOTE 2: Requires that you have installed Fzf's shell extensions.
 
-# Add a space after these completions:
-zstyle ':autocomplete:*' add-space executables aliases functions builtins reserved-words commands#
-# NOTE: All settings below should come AFTER sourcing zsh-autocomplete!
-#
-bindkey $key[Up]    up-line-or-search
-# up-line-or-search:  Open history menu.
-# up-line-or-history: Cycle to previous history line.
-bindkey $key[Down]  down-line-or-select
-# down-line-or-select:  Open completion menu.
-# down-line-or-history: Cycle to next history line.
-bindkey $key[Control-Space] list-expand
-# list-expand:      Reveal hidden completions.
-# set-mark-command: Activate text selection.
-# bindkey -M menuselect $key[Return] .accept-line
-# .accept-line: Accept command line.
-# accept-line:  Accept selection and exit menu.
-# Uncomment the following lines to disable live history search:
-zle -A {.,}history-incremental-search-forward
-zle -A {.,}history-incremental-search-backward
+    # Add a space after these completions:
+    zstyle ':autocomplete:*' add-space executables aliases functions builtins reserved-words commands#
+    # NOTE: All settings below should come AFTER sourcing zsh-autocomplete!
+    #
+    bindkey $key[Up]    up-line-or-search
+    # up-line-or-search:  Open history menu.
+    # up-line-or-history: Cycle to previous history line.
+    bindkey $key[Down]  down-line-or-select
+    # down-line-or-select:  Open completion menu.
+    # down-line-or-history: Cycle to next history line.
+    bindkey $key[Control-Space] list-expand
+    # list-expand:      Reveal hidden completions.
+    # set-mark-command: Activate text selection.
+    # bindkey -M menuselect $key[Return] .accept-line
+    # .accept-line: Accept command line.
+    # accept-line:  Accept selection and exit menu.
+    # Uncomment the following lines to disable live history search:
+    zle -A {.,}history-incremental-search-forward
+    zle -A {.,}history-incremental-search-backward
 
-#Eval $(thefuck --alias)
-# Autosuggestions
-# source /data/repos/zsh_autosuggestions/zsh-autosuggestions.zsh
-# ZSH_AUTOSUGGEST_USE_ASYNC=1
+    #Eval $(thefuck --alias)
+    # Autosuggestions
+    # source /data/repos/zsh_autosuggestions/zsh-autosuggestions.zsh
+    # ZSH_AUTOSUGGEST_USE_ASYNC=1
 
-# z.lua faster directory navigation
-source $HOME/.local/share/z.lua/z.lua.plugin.zsh
-zl_data_dir="$HOME/.local/share/zlua/"
-if [[ -n ${XDG_DATA_HOME} ]]
-then
-    zl_data_dir=${XDG_DATA_HOME}/zlua
-fi
-export _ZL_DATA=${zl_data_dir}/database
-mkdir -p ${zl_data_dir}
-## Visuals
-# Syntax Highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-ZSH_HIGHLIGHT_STYLES[default]=none
-ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red,bold
-ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=yellow
-ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=white,underline
-ZSH_HIGHLIGHT_STYLES[global-alias]=fg=cyan
+    # z.lua faster directory navigation
+    source $HOME/.local/share/z.lua/z.lua.plugin.zsh
+    zl_data_dir="$HOME/.local/share/zlua/"
+    if [[ -n ${XDG_DATA_HOME} ]]
+    then
+        zl_data_dir=${XDG_DATA_HOME}/zlua
+    fi
+    export _ZL_DATA=${zl_data_dir}/database
+    mkdir -p ${zl_data_dir}
+    ## Visuals
+    # Syntax Highlighting
+    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    ZSH_HIGHLIGHT_STYLES[default]=none
+    ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red,bold
+    ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=yellow
+    ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=white,underline
+    ZSH_HIGHLIGHT_STYLES[global-alias]=fg=cyan
 ZSH_HIGHLIGHT_STYLES[precommand]=fg=white,underline
 ZSH_HIGHLIGHT_STYLES[commandseparator]=none
 ZSH_HIGHLIGHT_STYLES[autodirectory]=fg=white,underline
@@ -281,3 +285,6 @@ ZSH_HIGHLIGHT_STYLES[numeric-fd]=none
 ZSH_HIGHLIGHT_STYLES[arg0]=fg=grey
 
 eval $(thefuck --alias)
+
+# Startup
+cd $zsh_data_home
