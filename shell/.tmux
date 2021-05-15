@@ -1,1 +1,1 @@
-source-file "./.local/share/tmux-themepack/powerline/default/cyan.tmuxtheme"
+source-file "${HOME}/.local/share/tmux-themepack/powerline/default/cyan.tmuxtheme"
