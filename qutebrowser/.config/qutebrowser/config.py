@@ -6,6 +6,9 @@ config.bind("<Ctrl-Shift-s>", "open qute://back;;tab-prev")
 config.bind("<ctrl+tab>", "tab-next")
 config.bind("<ctrl+shift+tab>", "tab-prev")
 config.bind("<f12>", "devtools")
+config.bind("<ctrl+r>", "reload")
+# Unbind Destruction, Error Prone Commands
+config.unbind("r")
 # Misc Config
 config.bind(",test", "message-info testmessg")
 # Misc Settings
