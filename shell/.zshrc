@@ -131,7 +131,7 @@ zlooking-glass-client()
 zzstd()
 {
     target=$1
-    tar -cf - $target | zstd --fast -T0 -12 -o $target.tar.zst
+    tar -cf - $target | zstd --fast -T3 -12 -o $target.tar.zst
 }
 zssh()
 {
