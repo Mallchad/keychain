@@ -8,6 +8,7 @@ config.bind("<ctrl+shift+tab>", "tab-prev")
 config.bind("<f12>", "devtools")
 config.bind("<ctrl+r>", "reload")
 config.bind("ctrl+w", "tab-close")
+config.bind("<alt+d>", "set-cmd-text :open -w {url:pretty}")
 # Unbind Destruction, Error Prone Commands
 config.unbind("r") # reload
 config.unbind("d") # tab-close
