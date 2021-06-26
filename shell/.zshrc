@@ -151,6 +151,21 @@ zssh()
     fi
 
 }
+zzp()
+{
+    arguments=${@}
+    # Silence output since its made redundant by `dirs -v`
+    pushd -q "$(z -e $arguments)"
+    dirs -v
+}
+zd() { dirs -v }
+# z pushd
+# Move 1 place off the directory stack
+zs()
+{
+    pushd +1
+    dirs -v
+}
 # autoload -Uz compinit
 #Prompt
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
