@@ -86,13 +86,7 @@ sudo()
 }
 zlsblk()
 {
-    $1=test
-    if [[ $1 == "-o" ]]
-    then
-        lsblk -o NAME,FSTYPE,FSAVAIL,FSUSED,FSSIZE,TYPE,MOUNTPOINT,SIZE,MODEL,$2
-    else
-        lsblk -o NAME,FSTYPE,FSAVAIL,FSUSED,FSSIZE,TYPE,MOUNTPOINT,SIZE,MODEL $@
-    fi
+    lsblk -o NAME,FSTYPE,FSAVAIL,FSUSED,FSSIZE,TYPE,MOUNTPOINT,SIZE,MODEL $@
 }
 zls()
 {
@@ -100,7 +94,7 @@ zls()
 }
 zffmpeg()
 {
-    ffmpeg -hwaccel cuda -n -i $1 -vcodec libx264 $2 $@
+    ffmpeg -hwaccel cuda -n -i $1 -vcodec libx264 $2
 }
 zlooking-glass-client()
 {
@@ -131,7 +125,7 @@ zlooking-glass-client()
 zzstd()
 {
     target=$1
-    tar -cf - $target | zstd --fast -T3 -12 -o $target.tar.zst
+    tar -cf - $target | zstd -T12 -3 -o $target.tar.zst
 }
 zssh()
 {
