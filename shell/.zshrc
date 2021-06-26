@@ -25,12 +25,31 @@ setopt inc_append_history
 setopt share_history
 # Lines configured by zsh-newuser-install
 unsetopt autocd
-HISTFILE=~/.config/zsh/zhistory
+histfile_depreceated=($HOME/.zsh_history
+                      $HOME/.config/zsh/zhistory
+                      $HOME/.config/zsh)
+HISTFILE=~/.local/share/zsh/history
 HISTSIZE=10000
 SAVEHIST=10000
-unsetopt beep notify
 bindkey -e
-# End of lines configured by zsh-newuser-install
+# Startup instructions
+# Merge and delete old history files
+tmp_histfile=$(dirname $HISTFILE)/history.tmp
+mkdir -p $(dirname $tmp_histfile)
+for x_histfile in ${histfile_depreceated}
+do
+    if [[ -f ${x_histfile} ]]
+    then
+        cat ${x_histfile} >> ${tmp_histfile}
+    fi
+    if [[ -e ${histfile} ]]
+    then
+        rm -d ${x_histfile}
+    fi
+done
+cat ${HISTFILE} >> ${tmp_histfile}
+mv ${tmp_histfile} ${HISTFILE}
+unset tmp_histfile
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/mallchad/.zshrc'
 # Sanity Functions
