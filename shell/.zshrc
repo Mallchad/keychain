@@ -213,7 +213,7 @@ zstyle ':autocomplete:tab:*' fzf-completion no
     # NOTE 2: Requires that you have installed Fzf's shell extensions.
 
     # Add a space after these completions:
-    zstyle ':autocomplete:*' add-space executables aliases functions builtins reserved-words commands#
+    zstyle ':autocomplete:*' add-space executables aliases functions builtins reserved-words commands
     # NOTE: All settings below should come AFTER sourcing zsh-autocomplete!
     #
     bindkey $key[Up]    up-line-or-search
