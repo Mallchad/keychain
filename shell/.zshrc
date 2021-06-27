@@ -8,6 +8,7 @@ export PATH="$PATH:/local/bin"
 # True Colour
 export TERM=screen-256color
 # qt Themeing
+# Only required when Plasma isn't in use
 # export QT_QPA_PLATFORMTHEME=qt5ct
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -16,15 +17,22 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Options
+## Options
 setopt noautomenu
 setopt nomenucomplete
+setopt extendedglob
+# Error on no glob match
+setopt nomatch
+# Report change on background status immediately
+setopt notify
 # Appends every command to the history file once it is executed
 setopt inc_append_history
 # Reloads the history whenever you use it
 setopt share_history
-# Lines configured by zsh-newuser-install
+# Disable cd given just a path
 unsetopt autocd
+# Disable beep on error
+unsetopt beep
 histfile_depreceated=($HOME/.zsh_history
                       $HOME/.config/zsh/zhistory
                       $HOME/.config/zsh)
