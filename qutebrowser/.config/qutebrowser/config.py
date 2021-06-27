@@ -14,10 +14,13 @@ config.unbind("r") # reload
 config.unbind("d") # tab-close
 # Misc Config
 config.bind(",test", "message-info testmessg")
-# Misc Settings
+# Darkmode Setup
+config.set("colors.webpage.bg", "black") # prevent blind white flash on tab change
 config.set("colors.webpage.darkmode.enabled", True)
-config.set("colors.webpage.darkmode.threshold.background", 155)
-config.set("colors.webpage.darkmode.threshold.text", 155)
+config.set("colors.webpage.preferred_color_scheme", "dark")
+config.set("colors.webpage.darkmode.threshold.background", 120)
+config.set("colors.webpage.darkmode.threshold.text", 120)
+# Misc Settings
 config.set("auto_save.session", True)
 config.set("content.autoplay", False)
 config.set("url.searchengines", {"DEFAULT": "https://google.com/search?q={}"})
