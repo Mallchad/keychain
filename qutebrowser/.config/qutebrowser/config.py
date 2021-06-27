@@ -34,3 +34,4 @@ config.set("url.searchengines", {
     'wiki': 'https://en.wikipedia.org/wiki/{}',
     'yt': 'https://www.youtube.com/results?search_query={}'})
 config.set("scrolling.smooth", True)
+config.set("content.pdfjs", True) # Automatically use pdfjs where possible
