@@ -23,4 +23,14 @@ config.set("colors.webpage.darkmode.threshold.text", 120)
 # Misc Settings
 config.set("auto_save.session", True)
 config.set("content.autoplay", False)
-config.set("url.searchengines", {"DEFAULT": "https://google.com/search?q={}"})
+config.set("url.searchengines", {
+    'DEFAULT': 'https://www.google.com/search?q={}',
+    'g': 'https://www.google.com/search?q={}',
+    'ddg': 'https://duckduckgo.com/?q={}',
+    'ama': 'https://www.amazon.com/s?k={}',
+    'aw': 'https://wiki.archlinux.org/?search={}',
+    'red': 'https://www.reddit.com/r/{}',
+    'ud': 'https://www.urbandictionary.com/define.php?term={}',
+    'wiki': 'https://en.wikipedia.org/wiki/{}',
+    'yt': 'https://www.youtube.com/results?search_query={}'})
+config.set("scrolling.smooth", True)
