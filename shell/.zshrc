@@ -87,6 +87,15 @@ alias -g zhome=$zsh_data_home
 # TODO: This would be more useful as a bundled script which is
 # copied / linked to a folder on the path
 alias -g ztime_stamp="date --utc +%Y-%m-%dT%-H%mZ"
+zcmake_compile_commands()
+{
+    echo "Attemtping to use any given generator"
+    echo "This may assume UNIX Makefiles"
+    cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..
+    echo "Copying 'compile_commands.json' to parent directory"
+    echo "Copy - "
+    cp -v compile_commands.json ../
+}
 sudo()
 {
     arguments=()
