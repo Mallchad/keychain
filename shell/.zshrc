@@ -80,6 +80,13 @@ alias -g ZNULL="> /dev/null 2> /dev/null"
 # Because apps like to litter your *real* "home"
 export zsh_data_home=${HOME}/userdata
 alias -g zhome=$zsh_data_home
+# Creates an ISO compliant utc timestamp
+# The hyphen + T format is chosen for its readability and
+# simplicity when navigating / parsing the format
+# Here the Z (zulu) notation is used to be explicit about UTC
+# TODO: This would be more useful as a bundled script which is
+# copied / linked to a folder on the path
+alias -g ztime_stamp="date --utc +%Y-%m-%dT%-H%mZ"
 sudo()
 {
     arguments=()
