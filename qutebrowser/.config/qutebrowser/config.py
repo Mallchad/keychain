@@ -9,11 +9,14 @@ config.bind("<f12>", "devtools")
 config.bind("<ctrl+r>", "reload")
 config.bind("ctrl+w", "tab-close")
 config.bind("<alt+d>", "set-cmd-text :open -w {url:pretty}")
-# Unbind Destruction, Error Prone Commands
+config.bind("<ctrl+=>", "zoom-in")
+config.bind("<ctrl+->", "zoom-out")
+# Unbind Destructive, Error Prone Commands
 config.unbind("r") # reload
 config.unbind("d") # tab-close
-# Misc Config
+# Misc Bindings
 config.bind(",test", "message-info testmessg")
+
 # Darkmode Setup
 config.set("colors.webpage.bg", "black") # prevent blind white flash on tab change
 config.set("colors.webpage.darkmode.enabled", True)
