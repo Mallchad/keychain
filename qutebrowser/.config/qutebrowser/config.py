@@ -78,11 +78,12 @@ config.set("input.insert_mode.plugins", False)
 config.set("hints.min_chars", 2)
 config.set("hints.chars", "abcdefghijklmnopqrstuvwxyz")
 config.set("hints.scatter", False)
-# config.set("fonts.hints", "bold 9 default_family")
+# config.set("fonts.hints", "bold 9pt default_family")
 config.set("hints.uppercase", True)
 config.set("colors.hints.fg", "rgba(255, 255, 255)")
 config.set("colors.hints.bg", "rgba(29,29,98,0.85)")
 config.set("colors.hints.match.fg", "red")
+config.set("hints.border", "0px")       # Hide the jarring border
 config.set("hints.radius", 2)           # Reduce rounding radius to make box sharper
 # Misc Settings
 config.set("auto_save.session", True)
