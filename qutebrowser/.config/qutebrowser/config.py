@@ -86,7 +86,6 @@ config.set("colors.hints.match.fg", "red")
 config.set("hints.radius", 2)           # Reduce rounding radius to make box sharper
 # Misc Settings
 config.set("auto_save.session", True)
-config.set("content.autoplay", False)
 config.set("url.searchengines", {
     'DEFAULT': 'https://www.google.com/search?q={}',
     'g': 'https://www.google.com/search?q={}',
@@ -98,4 +97,22 @@ config.set("url.searchengines", {
     'wiki': 'https://en.wikipedia.org/wiki/{}',
     'yt': 'https://www.youtube.com/results?search_query={}'})
 config.set("scrolling.smooth", True)
-config.set("content.pdfjs", True) # Automatically use pdfjs where possible
+config.set("content.autoplay", False)
+config.set("content.pdfjs", True)               # Automatically use pdfjs where possible
+config.set("downloads.location.directory", "~/tmp")
+config.set("downloads.location.suggestion", "filename") # Only show the filename for downloads
+config.set("downloads.position", "bottom")
+config.set("fonts.default_size", "13pt")
+config.set("tabs.title.alignment", "left")
+# config.set("tabs.title.format_pinned", "")    # Remove number for pinned tabs
+config.set("tabs.mode_on_change", "restore")    # Persist mode for indivudual tabs
+config.set("tabs.indicator.padding", {"bottom": 0, "left": 0, "right": 4, "top": 0})
+config.set("tabs.pinned.frozen", False)         # Allow navigating on pinned tabs
+config.set("tabs.title.format", "{audio}|{current_title}") # Hide unnececary tab index
+config.set("tabs.indicator.width", 0)           # Disable wasteful status indicator
+config.set("fonts.tabs.unselected", "10pt default_family")
+config.set("fonts.tabs.selected", "10pt default_family")
+# Allow javascript pages to access the clipboard
+config.set("content.javascript.can_access_clipboard", True)
+# Limit completion prompt to a percentage of the screen's height
+config.set("completion.height", "30%")
