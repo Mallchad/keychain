@@ -23,6 +23,26 @@ config.set("colors.webpage.darkmode.enabled", True)
 config.set("colors.webpage.preferred_color_scheme", "dark")
 config.set("colors.webpage.darkmode.threshold.background", 120)
 config.set("colors.webpage.darkmode.threshold.text", 120)
+
+# Input Settings
+config.set("zoom.mouse_divider", 2048)          # Increase mouse zoom precision
+config.set("input.partial_timeout", 5000)       # Quit verb after 5 seconds
+config.set("input.mouse.rocker_gestures", False) # Navigatie history with rocker gestures
+config.set("tabs.mousewheel_switching", False)  # Prevent scroll from switching tabs
+# Because of the various automatic insert mode entering behaviour
+# it can be quite non-deterministic, especially between sites,
+# this is quite confusing and mentally taxing on the user, especially a new user
+#
+# Here we tweak some of settings to make it more deterministic
+
+# Don't automatically change insert mode on text prompt
+config.set("input.insert_mode.auto_enter", False)
+config.set("input.insert_mode.auto_leave", False)
+config.set("input.insert_mode.auto_load", False)     # When focusing a prompt after page load
+# Leave insert mode when enterting a new page
+config.set("input.insert_mode.leave_on_load", True)
+# Don't enter insert mode when focusing a plugin like flash
+config.set("input.insert_mode.plugins", False)
 # Misc Settings
 config.set("auto_save.session", True)
 config.set("content.autoplay", False)
