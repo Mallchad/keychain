@@ -78,6 +78,13 @@ function DEBUG()
 # alias halt="loginctl halt"
 # alias suspend="loginctl suspend"
 alias merge="diff --line-format %L"
+alias zmount="mount | column -t"
+alias zcp="cp -pnv"
+alias zrm="rm -dv"
+alias zmv="mv -nv"
+alias zdu="du -sh"
+alias zdf="df -h"
+# Global aliases
 alias -g znull="> /dev/null 2> /dev/null"
 alias -g ZNULL="> /dev/null 2> /dev/null"
 # Because apps like to litter your *real* "home"
@@ -90,13 +97,25 @@ alias -g zhome=$zsh_data_home
 # TODO: This would be more useful as a bundled script which is
 # copied / linked to a folder on the path
 alias -g ztime_stamp="date --utc +%Y-%m-%dT%-H%mZ"
+zpsmem()
+{
+    ps auxf | sort -nr -k 4
+    # Add a duplicate table header at the bottom
+    echo "USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND"
+}
+zpscpu()
+{
+    ps auxf | sort -nr -k 3
+    # Add a duplicate table header at the bottom
+    echo "USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND"
+}
 zcmake_compile_commands()
 {
     echo "Attemtping to use any given generator"
     echo "This may assume UNIX Makefiles"
     cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..
     echo "Copying 'compile_commands.json' to parent directory"
-    echo "Copy - "
+    echo -n "Copy - "
     cp -v compile_commands.json ../
 }
 sudo()
@@ -191,6 +210,32 @@ zssh()
     fi
 
 }
+# Git Commit
+gcom()
+{
+    # Signed with gpg key
+    git commit -S -m $@
+}
+# Unsigned Git Commit
+gcomu()
+{
+    git commit -m $@
+
+}
+# Git Log
+glog()
+{
+    # Visualize branches with --graph
+    # pretty format uses '%' placeholder/replacements to format the log output
+    # %C<color> - change the lines of colours, breaks up the text for readability
+    # %h - abbreviated commit hash
+    # %aN - author name
+    # %G? - gpg signature system
+    # G means good signature, X/Y is expired, R is revoked, E is unchecked, N is none
+    # %D - ref names, basically branch and commit refs
+    # %s - subject, the short commit message
+    git log --graph --pretty="format:%C(auto) %h| %Cblue%aN|%Cgreen%G?|%Creset%D %s" $@
+}
 zzp()
 {
     arguments=${@}
@@ -199,13 +244,14 @@ zzp()
     dirs -v
 }
 zd() { dirs -v }
-# z pushd
+# z stack pushd
 # Move 1 place off the directory stack
 zs()
 {
     pushd +1
     dirs -v
 }
+alias zp=zs
 # autoload -Uz compinit
 #Prompt
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
