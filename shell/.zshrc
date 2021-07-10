@@ -40,6 +40,9 @@ HISTFILE=~/.local/share/zsh/history
 HISTSIZE=10000
 SAVEHIST=10000
 bindkey -e
+## Variables
+zsh_dirty_dir=${HOME}/tmp/session
+mkdir -p ${zsh_dirty_dir}
 # Startup instructions
 # Merge and delete old history files
 tmp_histfile=$(dirname $HISTFILE)/history.tmp
@@ -340,4 +343,6 @@ ZSH_HIGHLIGHT_STYLES[numeric-fd]=none
 ZSH_HIGHLIGHT_STYLES[arg0]=fg=grey
 
 # Startup
-cd $zsh_data_home
+# Navigate to a directory that is ok to pollute and dirt with programs
+# dumping in the current working directory
+cd ${zsh_dirty_dir}
