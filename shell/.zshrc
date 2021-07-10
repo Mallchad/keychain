@@ -50,7 +50,7 @@ do
     then
         cat ${x_histfile} >> ${tmp_histfile}
     fi
-    if [[ -e ${histfile} ]]
+    if [[ -e ${x_histfile} ]]
     then
         rm -d ${x_histfile}
     fi
