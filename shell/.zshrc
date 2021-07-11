@@ -214,15 +214,16 @@ zssh()
 gcom()
 {
     # Signed with gpg key
-    git commit -S -m $@
+    git commit --gpg-sign --message $@
 }
 # Unsigned Git Commit
 gcomu()
 {
-    git commit -m $@
+    # Prevent gpg signing
+    git commit --no-gpg-sign --message $@
 
 }
-# Git Log
+# Git Short Log
 glog()
 {
     # Visualize branches with --graph
@@ -235,6 +236,55 @@ glog()
     # %D - ref names, basically branch and commit refs
     # %s - subject, the short commit message
     git log --graph --pretty="format:%C(auto) %h| %Cblue%aN|%Cgreen%G?|%Creset%D %s" $@
+}
+# Git Short Status
+gstat()
+{
+    # rainbow command can be found
+    if [ -n "$(rainbow --version)" ]
+    then
+        # Show a short status with the branch
+        # Then color it similar to the --long output
+        # Before starting fix branch colouring
+        # --reset-after "\n" makes the colour only go up to end of line
+        # Green for (A) added files
+        # Blue for (M) modified files
+        # Red for (D) deleted files
+        # None for (??) unmodified files
+        git status --short --branch | rainbow \
+                                          --green-after "##" \
+                                          --red-after "\.\.\." \
+                                          --reset-all "\.\.\." \
+                                          --reset-after "\n" \
+                                          --green-before "A " \
+                                          --blue-before "M " \
+                                          --red-before "D " \
+
+
+                                          # Also show stash, since there is enough space
+                                          # Colourize for readability
+                                          # reset the colour to normal after ": " seperators
+                                          # again, reset after newline
+                                          git stash list | rainbow \
+                                                               --yellow-before "stash" \
+                                                               --green-after ":" \
+                                                               --reset-after "\n"
+    else
+        # Show a short status with the branch
+        git status --short --branch $@
+        # Also show stash, since there is enough space
+        git stash list
+    fi
+}
+# Diminishing length aliasing to help with learning new alias
+# Since, 'gstat' is far more memorable initially that 'gs', w hich will
+# eventually be baked into memory
+alias gsta="gstat"
+alias gs="gstat"
+gadd()
+{
+    # TODO rainbow mode this up at some point
+    git add --verbose $@
 }
 zzp()
 {
