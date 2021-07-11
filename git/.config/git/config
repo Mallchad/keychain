@@ -1,0 +1,20 @@
+[user]
+        email = ncaprisunfan@gmail.com
+        name = mallchad
+        signingKey = ncaprisunfan@gmail.com
+[merge]
+        conflictStyle = diff3
+[credential]
+        # cache git credentials in memory for a short period, measured in seconds
+        # 43200 seconds is 12 hours
+        # This is roughly enough to cover one working day but shouldn't leave it around for
+        # the long unattended periods for the computer out of hours
+        helper = cache --timeout=43200
+[commit]
+        # Sign all commits by default, if possible
+        gpgSign = true
+[push]
+        # Sign all pushes if possible
+        gpgSign = true
+[tag]
+        gpgSign = true
