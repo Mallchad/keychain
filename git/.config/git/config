@@ -15,6 +15,6 @@
         gpgSign = true
 [push]
         # Sign all pushes if possible
-        gpgSign = true
+        gpgSign = false
 [tag]
         gpgSign = true
