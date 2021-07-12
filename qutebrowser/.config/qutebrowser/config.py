@@ -25,7 +25,7 @@ config.set("colors.webpage.darkmode.threshold.background", 120)
 config.set("colors.webpage.darkmode.threshold.text", 120)
 
 # Input Settings
-config.set("zoom.mouse_divider", 2048)          # Increase mouse zoom precision
+config.set("zoom.mouse_divider", 1028)          # Increase mouse zoom precision
 config.set("input.partial_timeout", 5000)       # Quit verb after 5 seconds
 config.set("input.mouse.rocker_gestures", False) # Navigatie history with rocker gestures
 config.set("tabs.mousewheel_switching", False)  # Prevent scroll from switching tabs
