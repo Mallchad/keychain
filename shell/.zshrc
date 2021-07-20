@@ -97,6 +97,11 @@ alias -g zhome=$zsh_data_home
 # TODO: This would be more useful as a bundled script which is
 # copied / linked to a folder on the path
 alias -g ztime_stamp="date --utc +%Y-%m-%dT%-H%mZ"
+# Show the weather using curl
+alias zweather="curl wttr.in"
+alias zwth="curl wttr.in"
+alias zweatherg="curl v2.wttr.in"
+alias zwtg="curl v2.wttr.in"
 zpsmem()
 {
     ps auxf | sort -nr -k 4
