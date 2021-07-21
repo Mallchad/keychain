@@ -8,9 +8,11 @@ config.bind("<ctrl+shift+tab>", "tab-prev")
 config.bind("<f12>", "devtools")
 config.bind("<ctrl+r>", "reload")
 config.bind("ctrl+w", "tab-close")
-config.bind("<alt+d>", "set-cmd-text :open -w {url:pretty}")
+config.bind("<alt+d>", "set-cmd-text :open -w {url:pretty}") # edit URL
 config.bind("<ctrl+=>", "zoom-in")
 config.bind("<ctrl+->", "zoom-out")
+config.bind("<alt+left>", "back")               # Backwards in Tab History
+config.bind("<alt+right>", "forward")           # Forward in Tab History
 # Unbind Destructive, Error Prone Commands
 config.unbind("r") # reload
 config.unbind("d") # tab-close
