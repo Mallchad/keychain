@@ -1,14 +1,15 @@
 config.load_autoconfig()
 # Qutebrowser Bindings
-config.bind("b", "set-cmd-text --space :tab-select  ", mode="normal")
-config.bind("<Ctrl-Shift-s>", "open qute://back;;tab-prev")
+config.bind("b", "set-cmd-text --space :tab-select")            # Tab Search/Select
+config.bind("<Ctrl-Shift-s>", "open qute://back;;tab-prev")     # Tab Suspend
+config.bind("<ctrl+space>", "set-cmd-text --space :tab-select") # Tab Search/Select
 # Chromium Like Bindings
 config.bind("<ctrl+tab>", "tab-next")
 config.bind("<ctrl+shift+tab>", "tab-prev")
 config.bind("<f12>", "devtools")
 config.bind("<ctrl+r>", "reload")
 config.bind("ctrl+w", "tab-close")
-config.bind("<alt+d>", "set-cmd-text :open -w {url:pretty}") # edit URL
+config.bind("<alt+d>", "set-cmd-text :open {url:pretty}") # edit URL
 config.bind("<ctrl+=>", "zoom-in")
 config.bind("<ctrl+->", "zoom-out")
 config.bind("<alt+left>", "back")               # Backwards in Tab History
