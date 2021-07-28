@@ -1,10 +1,9 @@
 export LANG=en_US.UTF-8
-export PATH="${PATH}:$HOME/.local/bin"
-export PATH="${PATH}:/data/bin"
-export PATH="${PATH}:/usr/bin"
-export PATH="${PATH}:/bin"
-export PATH="$PATH:/home/mallchad/.dotnet/tools"
-export PATH="$PATH:/local/bin"
+# Ordered by priority
+export PATH="$HOME/.local/bin:${PATH}"
+export PATH="/local/bin:${PATH}"
+export PATH="/data/bin:${PATH}"
+export PATH="/home/mallchad/.dotnet/tools:${PATH}"
 # True Colour
 export TERM=xterm-256color
 
