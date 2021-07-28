@@ -6,7 +6,7 @@ export PATH="${PATH}:/bin"
 export PATH="$PATH:/home/mallchad/.dotnet/tools"
 export PATH="$PATH:/local/bin"
 # True Colour
-export TERM=screen-256color
+export TERM=xterm-256color
 
 # qt Themeing
 # Only required when Plasma isn't in use
