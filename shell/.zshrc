@@ -250,6 +250,8 @@ gstat()
     # rainbow command can be found
     if [ -n "$(rainbow --version)" ]
     then
+        # Summarize changes
+        git diff --compact-summary
         # Show a short status with the branch
         git status --short --branch
         # Also show stash, since there is enough space
@@ -261,6 +263,8 @@ gstat()
                              --green-after ":" \
                              --reset-after "\n"
     else
+        # Summarize Changes
+        git diff --compact-summary
         # Show a short status with the branch
         git status --short --branch $@
         # Also show stash, since there is enough space
