@@ -16,7 +16,6 @@ config.bind("<ctrl+->", "zoom-out")
 config.bind("<alt+left>", "back")               # Backwards in Tab History
 config.bind("<alt+right>", "forward")           # Forward in Tab History
 # The above bindings but allow in insert mode too
-config.bind("b", "set-cmd-text --space :tab-select", mode="insert")
 config.bind("<Ctrl-Shift-s>", "open qute://back;;tab-prev", mode="insert")
 config.bind("<ctrl+space>", "set-cmd-text --space :tab-select", mode="insert")
 config.bind("<ctrl+r>", "reload", mode="insert")
@@ -32,7 +31,6 @@ config.bind("<ctrl+=>", "zoom-in", mode="insert")
 config.bind("<ctrl+->", "zoom-out", mode="insert")
 config.bind("<alt+left>", "back", mode="insert")
 config.bind("<alt+right>", "forward", mode="insert")
-config.bind("b", "set-cmd-text --space :tab-select", mode="passthrough")
 config.bind("<Ctrl-Shift-s>", "open qute://back;;tab-prev", mode="passthrough")
 config.bind("<ctrl+space>", "set-cmd-text --space :tab-select", mode="passthrough")
 config.bind("<ctrl+r>", "reload", mode="passthrough")
