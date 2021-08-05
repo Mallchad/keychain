@@ -1,5 +1,5 @@
 # Don't load autoconfig, make session changes volatile
-# config.load_autoconfig()
+config.load_autoconfig(False)
 # Qutebrowser Bindings
 config.bind("b", "set-cmd-text --space :tab-select")            # Tab Search/Select
 config.bind("<Ctrl-Shift-s>", "open qute://back;;tab-prev")     # Tab Suspend
