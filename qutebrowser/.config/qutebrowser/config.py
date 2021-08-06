@@ -4,6 +4,7 @@ config.load_autoconfig(False)
 config.bind("b", "set-cmd-text --space :tab-select")            # Tab Search/Select
 config.bind("<Ctrl-Shift-s>", "open qute://back;;tab-prev")     # Tab Suspend
 config.bind("<ctrl+space>", "set-cmd-text --space :tab-select") # Tab Search/Select
+config.bind("<alt+m>", "tab-mute")
 # Chromium Like Bindings
 config.bind("<ctrl+tab>", "tab-next")
 config.bind("<ctrl+shift+tab>", "tab-prev")
@@ -33,6 +34,9 @@ config.bind("<alt+left>", "back", mode="insert")
 config.bind("<alt+right>", "forward", mode="insert")
 config.bind("<Ctrl-Shift-s>", "open qute://back;;tab-prev", mode="passthrough")
 config.bind("<ctrl+space>", "set-cmd-text --space :tab-select", mode="passthrough")
+config.bind("<alt+m>", "tab-mute", mode="insert")
+config.bind("<alt+m>", "tab-mute", mode="passthrough")
+
 config.bind("<ctrl+r>", "reload", mode="passthrough")
 config.bind("<ctrl+w>", "tab-close", mode="passthrough")
 config.bind("<alt+d>", "set-cmd-text :open {url:pretty}", mode="passthrough")
