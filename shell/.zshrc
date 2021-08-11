@@ -197,7 +197,8 @@ zlooking-glass-client()
 zzstd()
 {
     target=$1
-    tar -cf - $target | zstd -T12 -3 -o $target.tar.zst
+    # Compress with '-T0' to automatically use 1 job per core
+    tar -cf - $target | zstd -T0 -3 -o $target.tar.zst
 }
 zssh()
 {
