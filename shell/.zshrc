@@ -244,6 +244,19 @@ glog()
     # %s - subject, the short commit message
     git log --graph --pretty="format:%C(auto) %h| %Cblue%aN|%Cgreen%G?|%Creset%D %s" $@
 }
+gtlog
+{
+    # Visualize branches with --graph
+    # pretty format uses '%' placeholder/replacements to format the log output
+    # %C<color> - change the lines of colours, breaks up the text for readability
+    # %h - abbreviated commit hash
+    # %aN - author name
+    # %G? - gpg signature system
+    # G means good signature, X/Y is expired, R is revoked, E is unchecked, N is none
+    # %D - ref names, basically branch and commit refs
+    # %s - subject, the short commit message
+    git log --graph --pretty="format:%C(auto) %h| %ai %Cblue%aN|%Cgreen%G?|%Creset%D %s" $@
+}
 # Git Short Status
 gstat()
 {
