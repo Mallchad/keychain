@@ -231,6 +231,7 @@ gcomu()
     git commit --no-gpg-sign --message $@
 
 }
+alias gc="gcomu"
 # Git Short Log
 glog()
 {
@@ -245,20 +246,36 @@ glog()
     # %s - subject, the short commit message
     git log --graph --pretty="format:%C(auto) %h| %Cblue%aN|%Cgreen%G?|%Creset%D %s" $@
 }
+alias glog="gl"
+# Git ISO Timestamped Log
 gtlog()
 {
     # Visualize branches with --graph
     # pretty format uses '%' placeholder/replacements to format the log output
     # %C<color> - change the lines of colours, breaks up the text for readability
     # %h - abbreviated commit hash
+    # %ai - ISO timestamp, human friendly format
     # %aN - author name
     # %G? - gpg signature system
     # G means good signature, X/Y is expired, R is revoked, E is unchecked, N is none
     # %D - ref names, basically branch and commit refs
     # %s - subject, the short commit message
-    git log --graph --pretty="format:%C(auto) %h| %ai %Cblue%aN|%Cgreen%G?|%Creset%D %s" $@
+    git log --graph --pretty="format:%C(auto) %h| %Cred%ai %Cblue%aN|%Cgreen%G?|%Creset%D %s" $@
+}
+alias gtl="gtlog"
+# Git Diff
+gdiff()
+{
+    git diff
+}
+# Git Stage Diff
+gsdiff()
+{
+    git diff --staged
 }
 # Git Short Status
+alias gd="gdiff"
+alias gsd="gsdiff"
 gstat()
 {
     # rainbow command can be found
@@ -285,6 +302,7 @@ gstat()
         git stash list
     fi
 }
+alias gstat=ga
 # Diminishing length aliasing to help with learning new alias
 # Since, 'gstat' is far more memorable initially that 'gs', w hich will
 # eventually be baked into memory
@@ -295,6 +313,7 @@ gadd()
     # TODO rainbow mode this up at some point
     git add --verbose $@
 }
+alias gadd="ga"
 zzp()
 {
     arguments=${@}
@@ -302,7 +321,9 @@ zzp()
     pushd -q "$(z -e $arguments)"
     dirs -v
 }
+# List Directory Stack
 zd() { dirs -v }
+alias zdirs="zd"
 # z stack pushd
 # Move 1 place off the directory stack
 zs()
