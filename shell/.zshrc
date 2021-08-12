@@ -386,6 +386,8 @@ zstyle ':autocomplete:tab:*' widget-style complete-word
 # menu-complete: Press again to cycle to next (previous) completion.
 # menu-select:   Same as `menu-complete`, but updates selection in menu.
 # NOTE: Can NOT be changed at runtime.
+# Repeat tab presses to cycle to next (previous) completion.
+zstyle ':autocomplete:tab:*' widget-style menu-complete
 
 zstyle ':autocomplete:tab:*' fzf-completion no
 # no:  Tab uses Zsh's completion system only.
