@@ -395,11 +395,15 @@ mkdir -p ${zl_data_dir}
 eval $(thefuck --alias)
 
 # Generic Keybindings
-# Fix the mark/seclection command
-bindkey $key[Control-Space] set-mark-command
-# Fix the delete region command
-bindkey $key[Control-w] kill-region
+# control alias
+C="^[["
 
+BACKSPACE="^H"
+# Fix the mark/seclection command
+bindkey $C"Space" set-mark-command
+# Fix the delete region command
+bindkey $C"w" kill-region
+bindkey $BACKSPACE backward-delete-word
 ## Visuals
 # Syntax Highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
