@@ -245,7 +245,7 @@ glog()
     # %s - subject, the short commit message
     git log --graph --pretty="format:%C(auto) %h| %Cblue%aN|%Cgreen%G?|%Creset%D %s" $@
 }
-gtlog
+gtlog()
 {
     # Visualize branches with --graph
     # pretty format uses '%' placeholder/replacements to format the log output
