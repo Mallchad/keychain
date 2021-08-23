@@ -84,6 +84,7 @@ alias zmount="mount | column -t"
 alias zcp="cp -pnv"
 alias zrm="rm -dv"
 alias zmv="mv -nv"
+alias zln="ln -siv"
 alias zdu="du -sh"
 alias zdf="df -h"
 # Global aliases
@@ -246,7 +247,7 @@ glog()
     # %s - subject, the short commit message
     git log --graph --pretty="format:%C(auto) %h| %Cblue%aN|%Cgreen%G?|%Creset%D %s" $@
 }
-alias glog="gl"
+alias gl="glog"
 # Git ISO Timestamped Log
 gtlog()
 {
@@ -302,7 +303,6 @@ gstat()
         git stash list
     fi
 }
-alias gstat=ga
 # Diminishing length aliasing to help with learning new alias
 # Since, 'gstat' is far more memorable initially that 'gs', w hich will
 # eventually be baked into memory
@@ -313,7 +313,7 @@ gadd()
     # TODO rainbow mode this up at some point
     git add --verbose $@
 }
-alias gadd="ga"
+alias ga="gadd"
 zzp()
 {
     arguments=${@}
@@ -322,8 +322,8 @@ zzp()
     dirs -v
 }
 # List Directory Stack
-zd() { dirs -v }
-alias zdirs="zd"
+zdirs() { dirs -v }
+alias zd="zdirs"
 # z stack pushd
 # Move 1 place off the directory stack
 zs()
