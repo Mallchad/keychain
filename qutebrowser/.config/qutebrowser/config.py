@@ -51,8 +51,9 @@ config.bind("<ctrl+->", "zoom-out", mode="passthrough")
 config.bind("<alt+left>", "back", mode="passthrough")
 config.bind("<alt+right>", "forward", mode="passthrough")
 # Unbind Destructive, Error Prone Commands
-config.unbind("r") # reload
-config.unbind("d") # tab-close
+config.unbind("r")              # reload
+config.unbind("d")              # tab-close
+config.unbind("<ctrl+q>")       # quit
 # Misc Bindings
 config.bind(",test", "message-info testmessg")
 
