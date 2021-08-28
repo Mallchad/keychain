@@ -140,7 +140,7 @@ History Items[$e]=file:$HOME/pictures/elite_dangerous/v_photography,file:$HOME/p
 [General]
 BrowserApplication=org.qutebrowser.qutebrowser.desktop
 ColorScheme=AritimDark
-Name=Aritim-Dark_DEV
+Name=Aritim-Dark
 TerminalApplication=alacritty
 TerminalService=Alacritty.desktop
 XftAntialias=true
