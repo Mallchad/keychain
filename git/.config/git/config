@@ -1,6 +1,6 @@
 [user]
         email = ncaprisunfan@gmail.com
-        name = mallchad
+        name = Mallchad
         signingKey = ncaprisunfan@gmail.com
 [merge]
         conflictStyle = diff3
