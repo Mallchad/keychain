@@ -125,6 +125,7 @@ config.set("colors.hints.bg", "rgba(29,29,98,0.85)")
 config.set("colors.hints.match.fg", "red")
 config.set("hints.border", "0px")       # Hide the jarring border
 config.set("hints.radius", 2)           # Reduce rounding radius to make box sharper
+
 # Misc Settings
 config.set("auto_save.session", True)
 config.set("url.searchengines", {
@@ -157,3 +158,6 @@ config.set("fonts.tabs.selected", "10pt default_family")
 config.set("content.javascript.can_access_clipboard", True)
 # Limit completion prompt to a percentage of the screen's height
 config.set("completion.height", "30%")
+# Don't let websites grab and ask for rarely used permissions
+config.set("content.register_protocol_handler", False)
+config.set("content.notifications.enabled", False)
