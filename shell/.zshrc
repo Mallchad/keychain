@@ -99,7 +99,7 @@ alias -g zhome=$zsh_data_home
 # Here the Z (zulu) notation is used to be explicit about UTC
 # TODO: This would be more useful as a bundled script which is
 # copied / linked to a folder on the path
-alias -g ztime_stamp="date --utc +%Y-%m-%dT%-H%mZ"
+alias -g ztime_stamp="date --utc +%Y-%m-%dT%-H%MZ"
 # Show the weather using curl
 alias zweather="curl wttr.in"
 alias zwth="curl wttr.in"
