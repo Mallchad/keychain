@@ -375,8 +375,9 @@ zstyle ':autocomplete:tab:*' insert-unambiguous no
 zstyle ':autocomplete:tab:*' widget-style menu-select
 
 zstyle ':autocomplete:tab:*' fzf-completion no
-# Add a space after these completions:
-zstyle ':autocomplete:*' add-space executables aliases functions builtins reserved-words commands
+# Don't add a space after completions:
+zstyle ':autocomplete:*' add-space
+# Uncomment to Disable live history search
 zle -A {.,}history-incremental-search-forward
 zle -A {.,}history-incremental-search-backward
 
