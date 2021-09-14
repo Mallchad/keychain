@@ -182,8 +182,8 @@ zlooking-glass-client()
         win:fpsMin=144 \
         win:borderless=yes \
         app:renderer=egl \
-        app:framePollInterval=100 \
-        app:cursorPollInterval=100 \
+        app:framePollInterval=10000 \
+        app:cursorPollInterval=1000 \
         app:shmFile=/dev/shm/looking-glass \
         egl:vsync=no \
         app:cursorPollInterval=0 \
