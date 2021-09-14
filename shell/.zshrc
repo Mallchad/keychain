@@ -356,9 +356,9 @@ fi
 # '': Start each new command line with normal autocompletion.
 zstyle ':autocomplete:*' default-context ''
 # Start autocompletion immediately when you stop typing.
-zstyle ':autocomplete:*' min-delay 0.0
+zstyle ':autocomplete:*' min-delay 0.1
 # 0: Show completions immediately on each new command line.
-zstyle ':autocomplete:*' min-input 0
+zstyle ':autocomplete:*' min-input 2
 # Always show completions.
 zstyle ':autocomplete:*' ignored-input '' # extended glob pattern
 # When completions don't fit on screen, show up to this many lines:
