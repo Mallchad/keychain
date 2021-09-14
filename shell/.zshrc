@@ -372,7 +372,7 @@ zstyle ':completion:*:' group-order \
 # Tab first inserts substring common to all listed completions (if any).
 zstyle ':autocomplete:tab:*' insert-unambiguous no
 # Repeat tab presses to cycle to next (previous) completion.
-zstyle ':autocomplete:tab:*' widget-style menu-complete
+zstyle ':autocomplete:tab:*' widget-style menu-select
 
 zstyle ':autocomplete:tab:*' fzf-completion no
 # Add a space after these completions:
