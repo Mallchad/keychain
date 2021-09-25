@@ -126,9 +126,11 @@ config.set("colors.hints.match.fg", "red")
 config.set("hints.border", "0px")       # Hide the jarring border
 config.set("hints.radius", 2)           # Reduce rounding radius to make box sharper
 
-# Command Prompt Settings
+# Statusbar and Command Settings
 # Make it obvius when the promt is open
 config.set("colors.statusbar.command.bg", "#8b0000")
+# Make odd line colour bordering less distracting
+config.set("colors.completion.odd.bg", "#393939")
 
 # Misc Settings
 config.set("auto_save.session", True)
