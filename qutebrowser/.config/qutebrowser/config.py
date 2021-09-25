@@ -146,7 +146,7 @@ config.set("scrolling.smooth", True)
 config.set("content.autoplay", False)
 config.set("content.pdfjs", True)               # Automatically use pdfjs where possible
 config.set("downloads.location.directory", "~/tmp")
-config.set("downloads.location.suggestion", "filename") # Only show the filename for downloads
+config.set("downloads.location.suggestion", "both") # Show full path for download location
 config.set("downloads.position", "bottom")
 config.set("fonts.default_size", "13pt")
 config.set("tabs.title.alignment", "left")
