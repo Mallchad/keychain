@@ -126,6 +126,10 @@ config.set("colors.hints.match.fg", "red")
 config.set("hints.border", "0px")       # Hide the jarring border
 config.set("hints.radius", 2)           # Reduce rounding radius to make box sharper
 
+# Command Prompt Settings
+# Make it obvius when the promt is open
+config.set("colors.statusbar.command.bg", "#8b0000")
+
 # Misc Settings
 config.set("auto_save.session", True)
 config.set("url.searchengines", {
