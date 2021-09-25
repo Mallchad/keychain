@@ -158,6 +158,6 @@ config.set("fonts.tabs.selected", "10pt default_family")
 config.set("content.javascript.can_access_clipboard", True)
 # Limit completion prompt to a percentage of the screen's height
 config.set("completion.height", "30%")
-# Don't let websites grab and ask for rarely used permissions
+# Don't let websites grab and ask for rarely used permission
 config.set("content.register_protocol_handler", False)
 config.set("content.notifications.enabled", False)
