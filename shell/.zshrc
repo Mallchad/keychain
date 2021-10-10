@@ -399,15 +399,26 @@ mkdir -p ${zl_data_dir}
 eval $(thefuck --alias)
 
 # Generic Keybindings
-# control alias
+# aliases
 C="^[["
 
 BACKSPACE="^H"
+UP_ARROW="\e[A"
+UP_ARROW_ALT="\eOA"
+DOWN_ARROW="\e[B"
+DOWN_ARROW_ALT="\eOB"
+
 # Fix the mark/seclection command
 bindkey $C"Space" set-mark-command
 # Fix the delete region command
 bindkey $C"w" kill-region
 bindkey $BACKSPACE backward-delete-word
+# up-line-or-history: Cycle to previous history line.
+bindkey ${UP_ARROW} up-line-or-history
+bindkey ${UP_ARROW_ALT} up-line-or-history
+# down-line-or-history: Cycle to next history line.
+bindkey ${DOWN_ARROW} down-line-or-history
+bindkey ${DOWN_ARROW_ALT} down-line-or-history
 ## Visuals
 # Syntax Highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
