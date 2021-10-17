@@ -164,8 +164,101 @@ config.set("fonts.tabs.selected", "10pt default_family")
 config.set("content.javascript.can_access_clipboard", True)
 # Limit completion prompt to a percentage of the screen's height
 config.set("completion.height", "30%")
+
+# -- Preventing Website Misbehaviour --
+
 # Don't let websites grab and ask for rarely used permission
 config.set("content.register_protocol_handler", False)
 config.set("content.notifications.enabled", False)
 
+config.set("content.prefers_reduced_motion", True)
+
 config.set("editor.command", ["emacsclient", "--create-frame", "+{line}:{column0}", "{file}"])
+
+# Block Certificate errors by default
+config.set("content.tls.certificate_errors", "block")
+
+# Allow basic keybinds in prompt mode
+config.bind("<Ctrl-Shift-s>",    "open qute://back;;tab-prev", mode="prompt")
+config.bind("<ctrl+space>",      "set-cmd-text --space :tab-select", mode="prompt")
+config.bind("<ctrl+r>",          "reload", mode="prompt")
+config.bind("<ctrl+w>",          "tab-close", mode="prompt")
+config.bind("<alt+d>",           "set-cmd-text :open {url:pretty}", mode="prompt")
+config.bind("<ctrl+tab>",        "tab-next", mode="prompt")
+config.bind("<ctrl+shift+tab>",  "tab-prev", mode="prompt")
+config.bind("<f12>",             "devtools", mode="prompt")
+config.bind("<ctrl+r>",          "reload", mode="prompt")
+config.bind("<ctrl+w>",          "tab-close", mode="prompt")
+config.bind("<alt+d>",           "set-cmd-text :open {url:pretty}", mode="prompt")
+config.bind("<ctrl+=>",          "zoom-in", mode="prompt")
+config.bind("<ctrl+->",          "zoom-out", mode="prompt")
+config.bind("<alt+left>",        "back", mode="prompt")
+config.bind("<alt+right>",       "forward", mode="prompt")
+config.bind("<Ctrl-Shift-s>",    "open qute://back;;tab-prev", mode="passthrough")
+config.bind("<ctrl+space>",      "set-cmd-text --space :tab-select", mode="passthrough")
+config.bind("<alt+m>",           "tab-mute", mode="prompt")
+config.bind("<alt+m>",           "tab-mute", mode="passthrough")
+
+# Chromium-like
+config.bind("<ctrl+r>",          "reload", mode="prompt")
+config.bind("<ctrl+w>",          "tab-close", mode="prompt")
+config.bind("<alt+d>",           "set-cmd-text :open {url:pretty}", mode="prompt")
+config.bind("<ctrl+tab>",        "tab-next", mode="prompt")
+config.bind("<f12>",             "devtools", mode="prompt")
+config.bind("<ctrl+r>",          "reload", mode="prompt")
+config.bind("<ctrl+w>",          "tab-close", mode="prompt")
+config.bind("<alt+d>",           "set-cmd-text :open {url:pretty}", mode="prompt")
+config.bind("<ctrl+=>",          "zoom-in", mode="prompt")
+config.bind("<ctrl+->",          "zoom-out", mode="prompt")
+config.bind("<alt+left>",        "back", mode="prompt")
+config.bind("<alt+right>",       "forward", mode="prompt")
+
+# emacs-like
+config.bind("<alt-x>",           "set-cmd-text :", mode="prompt")
+
+# misc
+config.bind("<ctrl+shift+x>",    "quit --save", mode="prompt")
+
+# Allow basic keybinds in yesno mode
+config.bind("<Ctrl-Shift-s>",    "open qute://back;;tab-prev", mode="yesno")
+config.bind("<ctrl+space>",      "set-cmd-text --space :tab-select", mode="yesno")
+config.bind("<ctrl+r>",          "reload", mode="yesno")
+config.bind("<ctrl+w>",          "tab-close", mode="yesno")
+config.bind("<alt+d>",           "set-cmd-text :open {url:pretty}", mode="yesno")
+config.bind("<ctrl+tab>",        "tab-next", mode="yesno")
+config.bind("<ctrl+shift+tab>",  "tab-prev", mode="yesno")
+config.bind("<f12>",             "devtools", mode="yesno")
+config.bind("<ctrl+r>",          "reload", mode="yesno")
+config.bind("<ctrl+w>",          "tab-close", mode="yesno")
+config.bind("<alt+d>",           "set-cmd-text :open {url:pretty}", mode="yesno")
+config.bind("<ctrl+=>",          "zoom-in", mode="yesno")
+config.bind("<ctrl+->",          "zoom-out", mode="yesno")
+config.bind("<alt+left>",        "back", mode="yesno")
+config.bind("<alt+right>",       "forward", mode="yesno")
+config.bind("<Ctrl-Shift-s>",    "open qute://back;;tab-prev", mode="passthrough")
+config.bind("<ctrl+space>",      "set-cmd-text --space :tab-select", mode="passthrough")
+config.bind("<alt+m>",           "tab-mute", mode="yesno")
+config.bind("<alt+m>",           "tab-mute", mode="passthrough")
+
+# Chromium-like
+config.bind("<ctrl+r>",          "reload", mode="yesno")
+config.bind("<ctrl+w>",          "tab-close", mode="yesno")
+config.bind("<alt+d>",           "set-cmd-text :open {url:pretty}", mode="yesno")
+config.bind("<ctrl+tab>",        "tab-next", mode="yesno")
+config.bind("<f12>",             "devtools", mode="yesno")
+config.bind("<ctrl+r>",          "reload", mode="yesno")
+config.bind("<ctrl+w>",          "tab-close", mode="yesno")
+config.bind("<alt+d>",           "set-cmd-text :open {url:pretty}", mode="yesno")
+config.bind("<ctrl+=>",          "zoom-in", mode="yesno")
+config.bind("<ctrl+->",          "zoom-out", mode="yesno")
+config.bind("<alt+left>",        "back", mode="yesno")
+config.bind("<alt+right>",       "forward", mode="yesno")
+
+# emacs-like
+config.bind("<alt-x>",           "set-cmd-text :", mode="yesno")
+
+# misc
+config.bind("<ctrl+shift+x>",    "quit --save", mode="yesno")
+
+# -- Themeing --
+config.set("colors.prompts.bg", "#2b2b2b")
