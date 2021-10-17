@@ -1,66 +1,50 @@
+
+
+
+# --Helper Functions--
+
+stub = None
+
+## Bind a key to a command for all modes major modes
+def mode_bind(key, command, mode=stub):
+    for mode in ["insert", "passthrough", "prompt", "yesno", "caret"]:
+        config.bind(key, command, mode=mode)
+
+
 # Don't load autoconfig, make session changes volatile
 config.load_autoconfig(False)
+
 # Qutebrowser Bindings
 config.bind("b",                 "set-cmd-text --space :tab-select")            # Tab Search/Select
-config.bind("<Ctrl-Shift-s>",    "open qute://back;;tab-prev")     # Tab Suspend
-config.bind("<ctrl+space>",      "set-cmd-text --space :tab-select") # Tab Search/Select
-config.bind("<alt+m>",           "tab-mute")
+mode_bind("<Ctrl-Shift-s>",    "open qute://back;;tab-prev")     # Tab Suspend
+mode_bind("<ctrl+space>",      "set-cmd-text --space :tab-select") # Tab Search/Select
+mode_bind("<alt+m>",           "tab-mute")
 # Chromium Like Bindings
-config.bind("<ctrl+tab>",        "tab-next")
-config.bind("<ctrl+shift+tab>",  "tab-prev")
-config.bind("<f12>",             "devtools")
-config.bind("<ctrl+r>",          "reload")
-config.bind("<ctrl+w>",          "tab-close")
-config.bind("<alt+d>",           "set-cmd-text :open {url:pretty}") # edit URL
-config.bind("<ctrl+=>",          "zoom-in")
-config.bind("<ctrl+->",          "zoom-out")
-config.bind("<alt+left>",        "back")               # Backwards in Tab History
-config.bind("<alt+right>",       "forward")           # Forward in Tab History
-# The above bindings but allow in insert mode too
-config.bind("<Ctrl-Shift-s>",    "open qute://back;;tab-prev", mode="insert")
-config.bind("<ctrl+space>",      "set-cmd-text --space :tab-select", mode="insert")
-config.bind("<ctrl+r>",          "reload", mode="insert")
-config.bind("<ctrl+w>",          "tab-close", mode="insert")
-config.bind("<alt+d>",           "set-cmd-text :open {url:pretty}", mode="insert")
-config.bind("<ctrl+tab>",        "tab-next", mode="insert")
-config.bind("<ctrl+shift+tab>",  "tab-prev", mode="insert")
-config.bind("<f12>",             "devtools", mode="insert")
-config.bind("<ctrl+r>",          "reload", mode="insert")
-config.bind("<ctrl+w>",          "tab-close", mode="insert")
-config.bind("<alt+d>",           "set-cmd-text :open {url:pretty}", mode="insert")
-config.bind("<ctrl+=>",          "zoom-in", mode="insert")
-config.bind("<ctrl+->",          "zoom-out", mode="insert")
-config.bind("<alt+left>",        "back", mode="insert")
-config.bind("<alt+right>",       "forward", mode="insert")
-config.bind("<Ctrl-Shift-s>",    "open qute://back;;tab-prev", mode="passthrough")
-config.bind("<ctrl+space>",      "set-cmd-text --space :tab-select", mode="passthrough")
-config.bind("<alt+m>",           "tab-mute", mode="insert")
-config.bind("<alt+m>",           "tab-mute", mode="passthrough")
+mode_bind("<f12>",             "devtools")
 
-config.bind("<ctrl+r>",          "reload", mode="passthrough")
-config.bind("<ctrl+w>",          "tab-close", mode="passthrough")
-config.bind("<alt+d>",           "set-cmd-text :open {url:pretty}", mode="passthrough")
-config.bind("<ctrl+tab>",        "tab-next", mode="passthrough")
-config.bind("<ctrl+shift+tab>",  "tab-prev", mode="passthrough")
-config.bind("<f12>",             "devtools", mode="passthrough")
-config.bind("<ctrl+r>",          "reload", mode="passthrough")
-config.bind("<ctrl+w>",          "tab-close", mode="passthrough")
-config.bind("<alt+d>",           "set-cmd-text :open {url:pretty}", mode="passthrough")
-config.bind("<ctrl+=>",          "zoom-in", mode="passthrough")
-config.bind("<ctrl+->",          "zoom-out", mode="passthrough")
-config.bind("<alt+left>",        "back", mode="passthrough")
-config.bind("<alt+right>",       "forward", mode="passthrough")
+# Chromium Bindings allowed in all modes
+mode_bind("<ctrl+tab>",        "tab-next")
+mode_bind("<ctrl+shift+tab>",  "tab-prev")
+mode_bind("<ctrl+r>",          "reload")
+mode_bind("<ctrl+w>",          "tab-close")
+mode_bind("<alt+d>",           "set-cmd-text :open {url:pretty}") # edit URL
+mode_bind("<ctrl+=>",          "zoom-in")
+mode_bind("<ctrl+->",          "zoom-out")
+mode_bind("<alt+left>",        "back")               # Backwards in Tab History
+mode_bind("<alt+right>",       "forward")            # Forward in Tab History
+mode_bind("<f12>",             "devtools")
+
+# emacs-like
+mode_bind("<alt-x>", "set-cmd-text :")               # execut abitrary command
+mode_bind("<ctrl+shift+x>",    "quit --save")
+
+# Misc Bindings
+config.bind(",test",             "message-info testmessg")
 
 # Unbind Destructive, Error Prone Commands
 config.unbind("r")              # reload
 config.unbind("d")              # tab-close
 config.unbind("<ctrl+q>")       # quit
-
-# emacs-like
-config.bind("<alt-x>", "set-cmd-text :", mode="normal") # execut abitrary command
-
-# Misc Bindings
-config.bind(",test",             "message-info testmessg")
 
 # Darkmode Setup
 config.set("colors.webpage.bg", "black") # prevent blind white flash on tab change
@@ -169,6 +153,10 @@ config.set("fonts.tabs.selected", "10pt default_family")
 config.set("content.javascript.can_access_clipboard", True)
 # Limit completion prompt to a percentage of the screen's height
 config.set("completion.height", "30%")
+config.set("content.prefers_reduced_motion", True)
+config.set("editor.command",
+           ["emacsclient", "--create-frame", "+{line}:{column0}", "{file}"])
+
 
 # -- Preventing Website Misbehaviour --
 
@@ -176,94 +164,8 @@ config.set("completion.height", "30%")
 config.set("content.register_protocol_handler", False)
 config.set("content.notifications.enabled", False)
 
-config.set("content.prefers_reduced_motion", True)
-
-config.set("editor.command", ["emacsclient", "--create-frame", "+{line}:{column0}", "{file}"])
-
 # Block Certificate errors by default
 config.set("content.tls.certificate_errors", "block")
-
-# Allow basic keybinds in prompt mode
-config.bind("<Ctrl-Shift-s>",    "open qute://back;;tab-prev", mode="prompt")
-config.bind("<ctrl+space>",      "set-cmd-text --space :tab-select", mode="prompt")
-config.bind("<ctrl+r>",          "reload", mode="prompt")
-config.bind("<ctrl+w>",          "tab-close", mode="prompt")
-config.bind("<alt+d>",           "set-cmd-text :open {url:pretty}", mode="prompt")
-config.bind("<ctrl+tab>",        "tab-next", mode="prompt")
-config.bind("<ctrl+shift+tab>",  "tab-prev", mode="prompt")
-config.bind("<f12>",             "devtools", mode="prompt")
-config.bind("<ctrl+r>",          "reload", mode="prompt")
-config.bind("<ctrl+w>",          "tab-close", mode="prompt")
-config.bind("<alt+d>",           "set-cmd-text :open {url:pretty}", mode="prompt")
-config.bind("<ctrl+=>",          "zoom-in", mode="prompt")
-config.bind("<ctrl+->",          "zoom-out", mode="prompt")
-config.bind("<alt+left>",        "back", mode="prompt")
-config.bind("<alt+right>",       "forward", mode="prompt")
-config.bind("<Ctrl-Shift-s>",    "open qute://back;;tab-prev", mode="passthrough")
-config.bind("<ctrl+space>",      "set-cmd-text --space :tab-select", mode="passthrough")
-config.bind("<alt+m>",           "tab-mute", mode="prompt")
-config.bind("<alt+m>",           "tab-mute", mode="passthrough")
-
-# Chromium-like
-config.bind("<ctrl+r>",          "reload", mode="prompt")
-config.bind("<ctrl+w>",          "tab-close", mode="prompt")
-config.bind("<alt+d>",           "set-cmd-text :open {url:pretty}", mode="prompt")
-config.bind("<ctrl+tab>",        "tab-next", mode="prompt")
-config.bind("<f12>",             "devtools", mode="prompt")
-config.bind("<ctrl+r>",          "reload", mode="prompt")
-config.bind("<ctrl+w>",          "tab-close", mode="prompt")
-config.bind("<alt+d>",           "set-cmd-text :open {url:pretty}", mode="prompt")
-config.bind("<ctrl+=>",          "zoom-in", mode="prompt")
-config.bind("<ctrl+->",          "zoom-out", mode="prompt")
-config.bind("<alt+left>",        "back", mode="prompt")
-config.bind("<alt+right>",       "forward", mode="prompt")
-
-# emacs-like
-config.bind("<alt-x>",           "set-cmd-text :", mode="prompt") # Execute arbitrary command
-
-# misc
-config.bind("<ctrl+shift+x>",    "quit --save", mode="prompt")
-
-# Allow basic keybinds in yesno mode
-config.bind("<Ctrl-Shift-s>",    "open qute://back;;tab-prev", mode="yesno")
-config.bind("<ctrl+space>",      "set-cmd-text --space :tab-select", mode="yesno")
-config.bind("<ctrl+r>",          "reload", mode="yesno")
-config.bind("<ctrl+w>",          "tab-close", mode="yesno")
-config.bind("<alt+d>",           "set-cmd-text :open {url:pretty}", mode="yesno")
-config.bind("<ctrl+tab>",        "tab-next", mode="yesno")
-config.bind("<ctrl+shift+tab>",  "tab-prev", mode="yesno")
-config.bind("<f12>",             "devtools", mode="yesno")
-config.bind("<ctrl+r>",          "reload", mode="yesno")
-config.bind("<ctrl+w>",          "tab-close", mode="yesno")
-config.bind("<alt+d>",           "set-cmd-text :open {url:pretty}", mode="yesno")
-config.bind("<ctrl+=>",          "zoom-in", mode="yesno")
-config.bind("<ctrl+->",          "zoom-out", mode="yesno")
-config.bind("<alt+left>",        "back", mode="yesno")
-config.bind("<alt+right>",       "forward", mode="yesno")
-config.bind("<Ctrl-Shift-s>",    "open qute://back;;tab-prev", mode="passthrough")
-config.bind("<ctrl+space>",      "set-cmd-text --space :tab-select", mode="passthrough")
-config.bind("<alt+m>",           "tab-mute", mode="yesno")
-config.bind("<alt+m>",           "tab-mute", mode="passthrough")
-
-# Chromium-like
-config.bind("<ctrl+r>",          "reload", mode="yesno")
-config.bind("<ctrl+w>",          "tab-close", mode="yesno")
-config.bind("<alt+d>",           "set-cmd-text :open {url:pretty}", mode="yesno")
-config.bind("<ctrl+tab>",        "tab-next", mode="yesno")
-config.bind("<f12>",             "devtools", mode="yesno")
-config.bind("<ctrl+r>",          "reload", mode="yesno")
-config.bind("<ctrl+w>",          "tab-close", mode="yesno")
-config.bind("<alt+d>",           "set-cmd-text :open {url:pretty}", mode="yesno")
-config.bind("<ctrl+=>",          "zoom-in", mode="yesno")
-config.bind("<ctrl+->",          "zoom-out", mode="yesno")
-config.bind("<alt+left>",        "back", mode="yesno")
-config.bind("<alt+right>",       "forward", mode="yesno")
-
-# emacs-like
-config.bind("<alt-x>",           "set-cmd-text :", mode="yesno")
-
-# misc
-config.bind("<ctrl+shift+x>",    "quit --save", mode="yesno")
 
 # -- Themeing --
 config.set("colors.prompts.bg", "#2b2b2b")
