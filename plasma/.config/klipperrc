@@ -1,12 +1,11 @@
 [General]
 AutoStart=false
-IgnoreImages=false
 IgnoreSelection=true
 MaxClipItems=1000
 Number of Actions=0
 PreventEmptyClipboard=false
 SelectionTextOnly=false
-Version=5.21.2
+Version=5.22.5
 
 [Notification Messages]
 StartAutomatically=false
