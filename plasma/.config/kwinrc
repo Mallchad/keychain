@@ -2,8 +2,8 @@
 update_info=kwin.upd:replace-scalein-with-scale,kwin.upd:port-minimizeanimation-effect-to-js,kwin.upd:port-scale-effect-to-js,kwin.upd:port-dimscreen-effect-to-js,kwin.upd:auto-bordersize,kwin.upd:animation-speed,kwin.upd:desktop-grid-click-behavior,kwin.upd:no-swap-encourage
 
 [Compositing]
+Backend=XRender
 Enabled=false
-GLCore=true
 GLPreferBufferSwap=e
 GLTextureFilter=0
 HiddenPreviews=5
@@ -57,17 +57,15 @@ videowallEnabled=false
 
 [TabBox]
 ActivitiesMode=1
-ApplicationsMode=0
 DesktopLayout=org.kde.breeze.desktop
 DesktopListLayout=org.kde.breeze.desktop
 DesktopMode=1
 HighlightWindows=true
-LayoutName=thumbnails
+LayoutName=thumbnail_grid
 MinimizedMode=0
 MultiScreenMode=0
-ShowDesktopMode=0
 ShowTabBox=true
-SwitchingMode=0
+SwitchingMode=1
 
 [TabBoxAlternative]
 ActivitiesMode=1
