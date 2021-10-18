@@ -7,8 +7,8 @@ stub = None
 
 ## Bind a key to a command for all modes major modes
 def mode_bind(key, command, mode=stub):
-    for mode in ["insert", "passthrough", "prompt", "yesno", "caret"]:
-        config.bind(key, command, mode=mode)
+    for x_mode in ["normal", "insert", "passthrough", "prompt", "yesno", "caret"]:
+        config.bind(key, command, mode=x_mode)
 
 
 # Don't load autoconfig, make session changes volatile
@@ -16,7 +16,7 @@ config.load_autoconfig(False)
 
 # Qutebrowser Bindings
 config.bind("b",                 "set-cmd-text --space :tab-select")            # Tab Search/Select
-mode_bind("<Ctrl-Shift-s>",    "open qute://back;;tab-prev")     # Tab Suspend
+mode_bind("<ctrl-shift-s>",    "open qute://back;;tab-prev")     # Tab Suspend
 mode_bind("<ctrl+space>",      "set-cmd-text --space :tab-select") # Tab Search/Select
 mode_bind("<alt+m>",           "tab-mute")
 # Chromium Like Bindings
