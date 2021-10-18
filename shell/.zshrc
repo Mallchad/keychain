@@ -80,7 +80,7 @@ function DEBUG()
 # alias halt="loginctl halt"
 # alias suspend="loginctl suspend"
 alias merge="diff --line-format %L"
-alias zmount="mount | column --table"
+alias zmount="mount | column --table --table-columns 'DEVICE, ,MOUNTPOINT,  ,FILESYSTEM,OPTIONS'"
 alias zcp="cp --preserve=mode,ownership,timestamps --no-clobber --verbose"
 alias zrm="rm --dir --verbose"
 alias zmv="mv --no-clobber --verbose"
