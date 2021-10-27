@@ -3,7 +3,10 @@ export LANG=en_US.UTF-8
 export PATH="$HOME/.local/bin:${PATH}"
 export PATH="/local/bin:${PATH}"
 export PATH="/data/bin:${PATH}"
+# Nuget Tools
 export PATH="/home/mallchad/.dotnet/tools:${PATH}"
+# Curent Directory
+export PATH="./:${PATH}"
 # True Colour
 export TERM=xterm-256color
 
