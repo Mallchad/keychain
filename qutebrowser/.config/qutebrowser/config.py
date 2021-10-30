@@ -46,6 +46,14 @@ config.unbind("r")              # reload
 config.unbind("d")              # tab-close
 config.unbind("<ctrl+q>")       # quit
 
+# Allow using escape for webapp-like websites in insert-mode
+# Use 'ctrl-[' instead
+config.bind("<ctrl+[>", "mode-enter normal", mode="insert")
+config.bind("<ctrl+[>", "mode-enter normal", mode="caret")
+config.bind("<ctrl+[>", "mode-enter normal", mode="yesno")
+config.bind("<ctrl+[>", "mode-enter normal", mode="prompt")
+config.unbind("<ESC>", mode="insert")
+
 # Darkmode Setup
 config.set("colors.webpage.bg", "black") # prevent blind white flash on tab change
 config.set("colors.webpage.darkmode.enabled", True)
