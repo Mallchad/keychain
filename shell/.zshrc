@@ -251,7 +251,7 @@ glog()
     # G means good signature, X/Y is expired, R is revoked, E is unchecked, N is none
     # %D - ref names, basically branch and commit refs
     # %s - subject, the short commit message
-    git log --graph --pretty="format:%C(auto) %h| %Cblue%aN|%Cgreen%G?|%Creset%D %s" $@
+    git log -n 30 --graph --pretty="format:%C(auto) %h| %Cblue%aN|%Cgreen%G?|%Creset%D %s" $@
 }
 alias gl="glog"
 # Git ISO Timestamped Log
@@ -267,6 +267,7 @@ gtlog()
     # G means good signature, X/Y is expired, R is revoked, E is unchecked, N is none
     # %D - ref names, basically branch and commit refs
     # %s - subject, the short commit message
+    echo
     git log --graph --pretty="format:%C(auto) %h| %Cred%ai %Cblue%aN|%Cgreen%G?|%Creset%D %s" $@
 }
 alias gtl="gtlog"
