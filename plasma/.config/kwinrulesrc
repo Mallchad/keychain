@@ -87,5 +87,12 @@ wmclass=google-chrome
 wmclasscomplete=false
 wmclassmatch=1
 
+[8]
+Description=Spectacle
+strictgeometry=true
+strictgeometryrule=2
+wmclass=spectacle
+wmclassmatch=1
+
 [General]
-count=7
+count=8
