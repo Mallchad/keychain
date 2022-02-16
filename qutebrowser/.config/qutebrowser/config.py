@@ -155,6 +155,10 @@ config.set("tabs.indicator.padding", {"bottom": 0, "left": 0, "right": 4, "top":
 config.set("tabs.pinned.frozen", False)         # Allow navigating on pinned tabs
 config.set("tabs.title.format", "{audio}|{current_title}") # Hide unnececary tab index
 config.set("tabs.indicator.width", 0)           # Disable wasteful status indicator
+config.set("tabs.new_position.unrelated", "next") # Open new tabs after the current
+config.set("tabs.new_position.related", "next")   # Open links in tab after current
+config.set("tabs.last_close", "close")            # Close window on last-tab close
+
 config.set("fonts.tabs.unselected", "10pt default_family")
 config.set("fonts.tabs.selected", "10pt default_family")
 # Allow javascript pages to access the clipboard
