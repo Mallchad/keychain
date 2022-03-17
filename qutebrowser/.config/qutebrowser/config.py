@@ -19,6 +19,10 @@ config.bind("b",                 "set-cmd-text --space :tab-select")            
 mode_bind("<ctrl-shift-s>",    "open qute://back;;tab-prev")     # Tab Suspend
 mode_bind("<ctrl+space>",      "set-cmd-text --space :tab-select") # Tab Search/Select
 mode_bind("<alt+m>",           "tab-mute")
+mode_bind("<ctrl+,>",          "back")             # Move backwards in tab-history
+mode_bind("<ctrl+.>",          "forward")          # Move forwards in tab-history
+mode_bind("<alt+r>",           "hint")             # Show hints for clicking links / boxes
+
 # Chromium Like Bindings
 mode_bind("<f12>",             "devtools")
 
@@ -27,6 +31,7 @@ mode_bind("<ctrl+tab>",        "tab-next")
 mode_bind("<ctrl+shift+tab>",  "tab-prev")
 mode_bind("<ctrl+r>",          "reload")
 mode_bind("<ctrl+w>",          "tab-close")
+mode_bind("<ctrl+t>",          ":open -t")
 mode_bind("<alt+d>",           "set-cmd-text :open {url:pretty}") # edit URL
 mode_bind("<ctrl+=>",          "zoom-in")
 mode_bind("<ctrl+->",          "zoom-out")
