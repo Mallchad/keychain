@@ -290,6 +290,7 @@ activate task manager entry 8=none,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=none,Meta+9,Activate Task Manager Entry 9
 activate widget 104=none,none,Activate Icons-only Task Manager Widget
 activate widget 106=none,none,Activate Hard Disk Activity Widget
+activate widget 130=Meta+Shift+R,none,Activate Media Player Widget
 activate widget 14=none,none,Activate Digital Clock Widget
 activate widget 152=,none,Activate Application Launcher Widget
 activate widget 163=none,none,Activate Total CPU Use Widget
@@ -298,7 +299,7 @@ activate widget 3=,none,Activate Application Launcher Widget
 activate widget 30=,none,Activate Unknown Widget
 activate widget 4=,none,Activate Application Launcher Widget
 activate widget 41=,none,Activate Application Launcher Widget
-activate widget 42=,none,Activate Application Launcher Widget
+activate widget 42=none,none,Activate Application Launcher Widget
 activate widget 57=,none,Activate Application Launcher Widget
 activate widget 65=,none,Activate Unknown Widget
 activate widget 77=,none,Activate Application Launcher Widget
@@ -330,12 +331,12 @@ _launch=none,Tools,System Settings
 
 [wacomtablet]
 Map to fullscreen=none,Meta+Ctrl+F,Map to fullscreen
-Map to screen 1=Num+8\tMeta+\\\\,Meta+Ctrl+1,Map to screen 1
-Map to screen 2=Num+7\tMeta+|,Meta+Ctrl+2,Map to screen 2
+Map to screen 1=Meta+`\tMeta+8,Meta+Ctrl+1,Map to screen 1
+Map to screen 2=Meta+¬\tMeta+7,Meta+Ctrl+2,Map to screen 2
 Next Profile=none,Meta+Ctrl+N,Next profile
 Previous Profile=none,Meta+Ctrl+P,Previous Profile
-Toggle screen map selection=,Meta+Ctrl+M,Toggle between all screens
-Toggle stylus mode=Num+1\tCtrl+9,Meta+Ctrl+S,Toggle the Stylus Tool Relative/Absolute
+Toggle screen map selection=none,Meta+Ctrl+M,Toggle between all screens
+Toggle stylus mode=Meta+6,Meta+Ctrl+S,Toggle the Stylus Tool Relative/Absolute
 Toggle touch tool=none,Meta+Ctrl+T,Enable/Disable the Touch Tool
 _k_friendly_name=Wacom Tablet
 
