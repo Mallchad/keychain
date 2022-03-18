@@ -5,6 +5,7 @@ switch-to-activity-193b94c0-79eb-4624-9c60-140dc4096bb5=none,none,Switch to acti
 switch-to-activity-5e57f644-dd9f-4ce4-a862-6cf494f54659=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
+Switch keyboard layout to APL=none,none,Switch keyboard layout to APL
 Switch keyboard layout to English (UK)=none,none,Switch keyboard layout to English (UK)
 Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
 Switch to Next Keyboard Layout=none,Ctrl+Alt+K,Switch to Next Keyboard Layout
@@ -101,9 +102,9 @@ Switch to Desktop 20=none,none,Switch to Desktop 20
 Switch to Desktop 3=Meta+3,Ctrl+F3,Switch to Desktop 3
 Switch to Desktop 4=Meta+4,Ctrl+F4,Switch to Desktop 4
 Switch to Desktop 5=Meta+5,none,Switch to Desktop 5
-Switch to Desktop 6=Meta+6,none,Switch to Desktop 6
-Switch to Desktop 7=Meta+7,none,Switch to Desktop 7
-Switch to Desktop 8=Meta+8,none,Switch to Desktop 8
+Switch to Desktop 6=,none,Switch to Desktop 6
+Switch to Desktop 7=,none,Switch to Desktop 7
+Switch to Desktop 8=,none,Switch to Desktop 8
 Switch to Desktop 9=none,none,Switch to Desktop 9
 Switch to Next Desktop=,none,Switch to Next Desktop
 Switch to Next Screen=none,none,Switch to Next Screen

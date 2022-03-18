@@ -2,11 +2,11 @@
 update_info=kxkb_variants.upd:split-variants
 
 [Layout]
-DisplayNames=
-LayoutList=gb
+DisplayNames=,
+LayoutList=gb,apl
 LayoutLoopCount=-1
 Model=pc101
-Options=caps:none
+Options=caps:none,grp_led:caps,grp:alts_toggle,grp:ctrls_toggle
 ResetOldOptions=true
 ShowFlag=false
 ShowLabel=true
@@ -14,4 +14,4 @@ ShowLayoutIndicator=true
 ShowSingle=false
 SwitchMode=Global
 Use=true
-VariantList=\\0
+VariantList=,
