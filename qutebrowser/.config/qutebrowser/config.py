@@ -134,6 +134,18 @@ config.set("colors.statusbar.command.bg", "#8b0000")
 # Make odd line colour bordering less distracting
 config.set("colors.completion.odd.bg", "#393939")
 
+# Tab Settings
+config.set("tabs.title.alignment", "left")
+# config.set("tabs.title.format_pinned", "")    # Remove number for pinned tabs
+config.set("tabs.mode_on_change", "restore")    # Persist mode for indivudual tabs
+config.set("tabs.indicator.padding", {"bottom": 0, "left": 0, "right": 4, "top": 0})
+config.set("tabs.pinned.frozen", False)         # Allow navigating on pinned tabs
+config.set("tabs.title.format", "{audio}|{current_title}") # Hide unnececary tab index
+config.set("tabs.indicator.width", 0)           # Disable wasteful status indicator
+config.set("tabs.new_position.unrelated", "next") # Open new tabs after the current
+config.set("tabs.new_position.related", "next")   # Open links in tab after current
+config.set("tabs.last_close", "close")            # Close window on last-tab close
+
 # Misc Settings
 config.set("auto_save.session", True)
 config.set("url.searchengines", {
@@ -149,19 +161,15 @@ config.set("url.searchengines", {
 config.set("scrolling.smooth", True)
 config.set("content.autoplay", False)
 config.set("content.pdfjs", True)               # Automatically use pdfjs where possible
+
 config.set("downloads.location.directory", "~/tmp")
 config.set("downloads.location.suggestion", "both") # Show full path for download location
 config.set("downloads.position", "bottom")
+
 config.set("fonts.default_size", "13pt")
-config.set("tabs.title.alignment", "left")
-# config.set("tabs.title.format_pinned", "")    # Remove number for pinned tabs
-config.set("tabs.mode_on_change", "restore")    # Persist mode for indivudual tabs
-config.set("tabs.indicator.padding", {"bottom": 0, "left": 0, "right": 4, "top": 0})
-config.set("tabs.pinned.frozen", False)         # Allow navigating on pinned tabs
-config.set("tabs.title.format", "{audio}|{current_title}") # Hide unnececary tab index
-config.set("tabs.indicator.width", 0)           # Disable wasteful status indicator
 config.set("fonts.tabs.unselected", "10pt default_family")
 config.set("fonts.tabs.selected", "10pt default_family")
+
 # Allow javascript pages to access the clipboard
 config.set("content.javascript.can_access_clipboard", True)
 # Limit completion prompt to a percentage of the screen's height
