@@ -152,9 +152,10 @@ config.set("url.searchengines", {
     'DEFAULT': 'https://www.google.com/search?q={}',
     'g': 'https://www.google.com/search?q={}',
     'ddg': 'https://duckduckgo.com/?q={}',
-    'ama': 'https://www.amazon.com/s?k={}',
+    'amazon': 'https://www.amazon.co.uk/s?k={}',
+    'amacom': 'https://www.amazon.com/s?k={}',
     'aw': 'https://wiki.archlinux.org/?search={}',
-    'red': 'https://www.reddit.com/r/{}',
+    'reddit': 'https://www.reddit.com/r/{}',
     'ud': 'https://www.urbandictionary.com/define.php?term={}',
     'wiki': 'https://en.wikipedia.org/wiki/{}',
     'yt': 'https://www.youtube.com/results?search_query={}'})
