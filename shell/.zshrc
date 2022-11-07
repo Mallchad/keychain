@@ -349,18 +349,19 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # source <(cod init $$ zsh)
 # setopt correct_all
 
-aur_zsh_autocomplete_dir=/usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-if [[ -e $aur_zsh_autocomplete_dir ]]
+aur_zsh_autocomplete_file=/usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+stow_zsh_autocomplete_file=${HOME}"./.local/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
+if [[ -e $aur_zsh_autocomplete_file ]]
 then
-    source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+    source ${aur_zsh_autocomplete_file}
 else
-    source ${HOME}/.local/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+    echo "Failed to find zsh-autocomplete plugin"
 fi
 # zsh-autocomplete Config
 # '': Start each new command line with normal autocompletion.
 zstyle ':autocomplete:*' default-context ''
 # Start autocompletion immediately when you stop typing.
-zstyle ':autocomplete:*' min-delay 0.1
+zstyle ':autocomplete:*' min-delay 0.05
 # 0: Show completions immediately on each new command line.
 zstyle ':autocomplete:*' min-input 2
 # Always show completions.
