@@ -161,7 +161,7 @@ LookAndFeelPackage=Aritim-Dark
 ShowDeleteCommand=true
 SingleClick=false
 contrast=4
-widgetStyle=Fusion
+widgetStyle=Breeze
 
 [KFileDialog Settings]
 Allow Expansion=false
