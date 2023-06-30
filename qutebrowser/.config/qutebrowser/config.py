@@ -50,6 +50,8 @@ config.bind(",test",             "message-info testmessg")
 config.unbind("r")              # reload
 config.unbind("d")              # tab-close
 config.unbind("<ctrl+q>")       # quit
+config.unbind("<ctrl+shift+w>") # close (close-window)
+config.unbind("co")             # tab-only
 
 # Allow using escape for webapp-like websites in insert-mode
 # Use 'ctrl-[' instead
