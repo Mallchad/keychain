@@ -129,6 +129,7 @@ config.set("colors.hints.bg", "rgba(29,29,98,0.85)")
 config.set("colors.hints.match.fg", "red")
 config.set("hints.border", "0px")       # Hide the jarring border
 config.set("hints.radius", 2)           # Reduce rounding radius to make box sharper
+config.set("hints.leave_on_load", True) # Pointless, does nothing if the page changes under you
 
 # Statusbar and Command Settings
 # Make it obvius when the promt is open
