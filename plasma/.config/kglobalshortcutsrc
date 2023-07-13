@@ -58,7 +58,7 @@ mute=none,Volume Mute,Mute
 Halt Without Confirmation=none,none,Halt Without Confirmation
 Lock Session=Meta+L\tScreensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Lock Session
 Log Out=none,Ctrl+Alt+Del,Log Out
-Log Out Without Confirmation=Ctrl+Alt+Backspace,none,Log Out Without Confirmation
+Log Out Without Confirmation=none,none,Log Out Without Confirmation
 Reboot Without Confirmation=none,none,Reboot Without Confirmation
 _k_friendly_name=Session Management
 
