@@ -386,6 +386,10 @@ zstyle ':autocomplete:*' add-space
 zle -A {.,}history-incremental-search-forward
 zle -A {.,}history-incremental-search-backward
 
+# Make Tab and ShiftTab cycle completions on the command line
+bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
+bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
+
 #Eval $(thefuck --alias)
 # Autosuggestions
 # source /data/repos/zsh_autosuggestions/zsh-autosuggestions.zsh
