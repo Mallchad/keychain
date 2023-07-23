@@ -422,12 +422,16 @@ bindkey $C"Space" set-mark-command
 # Fix the delete region command
 bindkey $C"w" kill-region
 bindkey $BACKSPACE backward-delete-word
+
+# Disable zsh-autocomplete history behaviour, not super intuitive
 # up-line-or-history: Cycle to previous history line.
 bindkey ${UP_ARROW} up-line-or-history
 bindkey ${UP_ARROW_ALT} up-line-or-history
+bindkey "^p" up-line-or-history
 # down-line-or-history: Cycle to next history line.
 bindkey ${DOWN_ARROW} down-line-or-history
 bindkey ${DOWN_ARROW_ALT} down-line-or-history
+bindkey "^n" down-line-or-history
 
 # -- Visuals --
 
