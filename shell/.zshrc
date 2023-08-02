@@ -371,9 +371,9 @@ zstyle ':autocomplete:*' ignored-input '' # extended glob pattern
 zstyle ':autocomplete:*' list-lines 16
 # If any of the following are shown at the same time, list them in the order given:
 zstyle ':completion:*:' group-order \
-       expansions history-words options \
+       expansions options \
        aliases functions builtins reserved-words \
-       executables local-directories directories suffix-aliases
+       executables local-directories directories suffix-aliases history-words
 # Tab first inserts substring common to all listed completions (if any).
 zstyle ':autocomplete:tab:*' insert-unambiguous no
 # Repeat tab presses to cycle to next (previous) completion.
@@ -382,18 +382,24 @@ zstyle ':autocomplete:tab:*' widget-style menu-select
 zstyle ':autocomplete:tab:*' fzf-completion no
 # Don't add a space after completions:
 zstyle ':autocomplete:*' add-space
-# Uncomment to Disable live history search
-zle -A {.,}history-incremental-search-forward
-zle -A {.,}history-incremental-search-backward
+
+# Disable live history binding, the default zsh one is more intuitive and fast under this setup
+_disable-autocomplete-history-binding()
+{
+    builtin zle -N history-incremental-search-backward .history-incremental-search-backward
+    builtin zle -N history-incremental-search-forward .history-incremental-search-foward
+}
+add-zle-hook-widget line-init _disable-autocomplete-history-binding
 
 # Make Tab and ShiftTab cycle completions on the command line
 bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
 bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
 
+# Auto-accept commands when you press enter to avoid pressing enter twice
+bindkey -M menuselect '\r' .accept-line
+
 #Eval $(thefuck --alias)
 # Autosuggestions
-# source /data/repos/zsh_autosuggestions/zsh-autosuggestions.zsh
-# ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 # z.lua faster directory navigation
 source $HOME/.local/share/z.lua/z.lua.plugin.zsh
